@@ -5,18 +5,41 @@
 #include "updatable_scene.h"
 #include "runtime.h"
 
-class UpdatableObject2 : public UpdatableObject
+class A
 {
-	void operator=(UpdatableObject& copy)
+public:
+	A()
 	{
-		printf("COPY 2.0!\n");
+		printf("A CTOR\n");
+	}
+	virtual void a()
+	{
+		printf("A\n");
+	}
+};
+class B : public A
+{
+public:
+	B()
+	{
+		printf("B CTOR\n");
+	}
+	void a() override
+	{
+		printf("B\n");
 	}
 };
 
 int main()
 {
-	UpdatableScene scene = UpdatableScene();
-	UpdatableScene scene2 = scene;
+	RuntimeBuilder builder = RuntimeBuilder();
+	builder.window_name = "Window";
+	builder.window_width = 512;
+	builder.window_height = 512;
+	builder.window_flags = SDL_WINDOW_RESIZABLE;
+
+	Runtime runtime = Runtime(builder);
+	runtime.begin();
 
 	return 0;
 }

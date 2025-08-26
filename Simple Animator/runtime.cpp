@@ -8,20 +8,6 @@ Runtime::Runtime(RuntimeBuilder builder)
 		builder.window_height,
 		builder.window_flags);
 }
-Runtime::Runtime(const Runtime& copy)
-{
-	if (copy._window != nullptr)
-	{
-		this->_window = new Window(*copy._window);
-	}
-	this->_input_events = copy._input_events;
-
-}
-Runtime::Runtime(const Runtime&& move) noexcept
-{
-	this->_window = move._window;
-	this->_input_events = move._input_events;
-}
 Runtime::~Runtime()
 {
 	if (_window != nullptr)

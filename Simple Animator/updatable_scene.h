@@ -19,7 +19,7 @@ private:
 	/// The root of the scene.
 	/// </summary>
 	UpdatableObject _root = UpdatableObject();
-
+	
 public:
 	/// <summary>
 	/// Tells the root (if one exists) to update.
@@ -29,6 +29,8 @@ public:
 	/// Tells the root (if on exists) to draw.
 	/// </summary>
 	void draw_root();
+
+	UpdatableObject& get_root();
 
 	virtual void operator=(const UpdatableScene& copy);
 };

@@ -3,6 +3,7 @@
 
 #include "input_event.h"
 #include "window.h"
+#include "updatable_scene.h"
 
 /// <summary>
 /// Holds properties to be passed int a Runtime object during construction.
@@ -22,14 +23,13 @@ class Runtime
 {
 public:
 	Runtime(RuntimeBuilder builder);
-	Runtime(const Runtime& copy);
-	Runtime(const Runtime&& move) noexcept;
 	~Runtime();
 
 private:
 	Window* _window = nullptr;
 	InputEvent _input_events = InputEvent();
-	
+	UpdatableScene scene = UpdatableScene();
+
 	bool _is_running = false;
 	
 	void _mainloop();

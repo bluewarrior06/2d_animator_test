@@ -2,7 +2,7 @@
 
 UpdatableScene::UpdatableScene()
 {
-	_root._name = "ROOT";
+	_root._name = "root";
 }
 UpdatableScene::UpdatableScene(const UpdatableScene& copy)
 {
@@ -20,6 +20,11 @@ void UpdatableScene::update_root()
 void UpdatableScene::draw_root()
 {
 	_root.draw();
+}
+
+UpdatableObject& UpdatableScene::get_root()
+{
+	return _root;
 }
 
 void UpdatableScene::operator=(const UpdatableScene& copy)
