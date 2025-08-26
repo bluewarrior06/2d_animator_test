@@ -49,6 +49,8 @@ private:
 	bool _is_running = false;
 	
 	void _mainloop();
+	void _pre_update_servers();
+	void _post_update_servers();
 
 public:
 	static void initialize_globals(GlobalRuntimeBuilder builder);

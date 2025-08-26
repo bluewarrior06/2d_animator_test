@@ -27,10 +27,20 @@ void Runtime::_mainloop()
 {
 	while (_is_running)
 	{
+		_pre_update_servers();
 		_input.poll_events();
 		_scene.update_root();
 		_scene.draw_root();
+		_post_update_servers();
 	}
+}
+void Runtime::_pre_update_servers()
+{
+
+}
+void Runtime::_post_update_servers()
+{
+
 }
 
 void Runtime::initialize_globals(GlobalRuntimeBuilder builder)
