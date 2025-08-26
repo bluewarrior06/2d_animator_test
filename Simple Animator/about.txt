@@ -1,0 +1,16 @@
+What is this project about? I have always loved generative art. And no, I'm not talking about
+AI generated art, I'm talking about art created and instructed through fully planned out
+logic. It's akin to something you may see in a demoscene, where someone will just
+make some weird shit because it looks cool as fuck. This project is no different!
+
+Each separate animation is inside of a "scene", which holds it's own logic for during
+playback. Each scene can have multiple different objects that can move around 
+on screen.
+
+Scene ideas -
+[ ] - Rain falling in different directions.
+[ ] - Kid jumping in puddles.
+[ ] - Rain world "semi-simulation".
+(there is an obvious WET theme going on right now...)
+[ ] - Magma pools popping and releasing magma.
+[ ] - A bunch of drying clothes flapping in the wind.

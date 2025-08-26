@@ -1,17 +1,26 @@
 #include "runtime.h"
 
-Runtime::Runtime()
+Runtime::Runtime(RuntimeBuilder builder)
 {
+	_window = new Window(
+		builder.window_name,
+		builder.window_width,
+		builder.window_height,
+		builder.window_flags);
 }
 Runtime::Runtime(const Runtime& copy)
 {
-	this->_window = new Window(*copy._window);
+	if (copy._window != nullptr)
+	{
+		this->_window = new Window(*copy._window);
+	}
 	this->_input_events = copy._input_events;
 
 }
 Runtime::Runtime(const Runtime&& move)
 {
-
+	this->_window = move._window;
+	this->_input_events = move._input_events;
 }
 Runtime::~Runtime()
 {
@@ -31,14 +40,6 @@ void Runtime::_mainloop()
 
 void Runtime::begin()
 {
-	_window = new Window(
-		window_name_on_begin,
-		window_width_on_begin,
-		window_height_on_begin,
-		window_flags_on_begin);
-	
-	_input_events.event_handler.events.push_back(SDLEventEvent());
-
 	_is_running = true;
 	_mainloop();
 }

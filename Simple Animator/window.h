@@ -17,6 +17,10 @@ public:
 	
 private:
 	SDL_Window* _window = nullptr;
+
+public:
+	void operator=(const Window& copy);
+	void operator=(Window&& move);
 };
 
 class WindowErrorException : public std::exception

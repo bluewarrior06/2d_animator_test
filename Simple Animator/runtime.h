@@ -5,12 +5,23 @@
 #include "window.h"
 
 /// <summary>
+/// Holds properties to be passed int a Runtime object during construction.
+/// </summary>
+struct RuntimeBuilder
+{
+	std::string window_name = "Window";
+	int window_width = 0;
+	int window_height = 0;
+	SDL_WindowFlags window_flags = SDL_WINDOW_RESIZABLE;
+};
+
+/// <summary>
 /// Encapsulates runtime logic into a single class.
 /// </summary>
 class Runtime
 {
 public:
-	Runtime();
+	Runtime(RuntimeBuilder builder);
 	Runtime(const Runtime& copy);
 	Runtime(const Runtime&& move);
 	~Runtime();
@@ -24,13 +35,7 @@ private:
 	void _mainloop();
 
 public:
-	std::string window_name_on_begin = "Window";
-	int window_width_on_begin = 0;
-	int window_height_on_begin = 0;
-	int window_flags_on_begin = SDL_WINDOW_RESIZABLE;
-
-	// Constructs critical features and begins the mainloop.
-
+	// Begins the mainloop.
 	void begin();
 	// Ends the mainloop.
 	// The mainloop will end once the loop is done processing a loop.

@@ -12,24 +12,20 @@ class SDLEventEvent : public Event<SDL_Event&>
 public:
 	SDLEventEvent()
 	{
-		printf("CTOR\n");
 	}
 	SDLEventEvent(SDLEventEvent& copy)
 	{
 	}
 	SDLEventEvent(SDLEventEvent&& move) noexcept
 	{
-
 	}
 	~SDLEventEvent()
 	{
-
 	}
 
 public:
 	void activated(SDL_Event event)
 	{
-		printf("Event Activated.\n");
 	}
 };
 

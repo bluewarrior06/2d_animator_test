@@ -9,13 +9,14 @@
 
 int main()
 {
-	
-	Runtime runtime = Runtime();
+	RuntimeBuilder runtime_builder = RuntimeBuilder();
+	runtime_builder.window_name = "Window";
+	runtime_builder.window_width = 512;
+	runtime_builder.window_height = 512;
+	runtime_builder.window_flags = SDL_WINDOW_RESIZABLE;
 
-	runtime.window_width_on_begin = 512;
-	runtime.window_height_on_begin = 512;
-
+	Runtime runtime = Runtime(runtime_builder);
 	runtime.begin();
-
+	
 	return 0;
 }
