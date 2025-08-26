@@ -3,5 +3,27 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="..\..\..\..\..\..\libraries\glad 4.6\src\glad.c" />
+    <ClCompile Include="event.cpp">
+      <Filter>generic\event</Filter>
+    </ClCompile>
+    <ClCompile Include="event_handler.cpp">
+      <Filter>generic\event</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="generic">
+      <UniqueIdentifier>{be19b189-4dce-4a36-b41e-7c341188f43c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generic\event">
+      <UniqueIdentifier>{63dd1f2b-7026-40f3-be80-08a31b0d7f8c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="event.h">
+      <Filter>generic\event</Filter>
+    </ClInclude>
+    <ClInclude Include="event_handler.h">
+      <Filter>generic\event</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

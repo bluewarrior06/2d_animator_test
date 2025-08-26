@@ -136,7 +136,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\..\..\libraries\glad 4.6\src\glad.c" />
+    <ClCompile Include="event.cpp" />
+    <ClCompile Include="event_handler.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="event.h" />
+    <ClInclude Include="event_handler.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

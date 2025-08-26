@@ -1,0 +1,2 @@
+Folder structure should follow this structure:
+[core category]/[class name]/[class source, sub class name]/[source]
