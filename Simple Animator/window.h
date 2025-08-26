@@ -12,7 +12,7 @@ class Window
 public:
 	Window(std::string name, int width, int height, SDL_WindowFlags window_flags);
 	Window(const Window& copy);
-	Window(Window&& move);
+	Window(Window&& move) noexcept;
 	~Window();
 	
 private:
@@ -20,12 +20,7 @@ private:
 
 public:
 	void operator=(const Window& copy);
-	void operator=(Window&& move);
-};
-
-class WindowErrorException : public std::exception
-{
-
+	void operator=(Window&& move) noexcept;
 };
 
 #endif

@@ -23,11 +23,11 @@ class Runtime
 public:
 	Runtime(RuntimeBuilder builder);
 	Runtime(const Runtime& copy);
-	Runtime(const Runtime&& move);
+	Runtime(const Runtime&& move) noexcept;
 	~Runtime();
 
 private:
-	Window* _window;
+	Window* _window = nullptr;
 	InputEvent _input_events = InputEvent();
 	
 	bool _is_running = false;
@@ -41,6 +41,7 @@ public:
 	// The mainloop will end once the loop is done processing a loop.
 	void end();
 
+	// If the runtime object is currently running.
 	bool is_currently_running();
 
 };

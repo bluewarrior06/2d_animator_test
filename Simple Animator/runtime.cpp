@@ -17,7 +17,7 @@ Runtime::Runtime(const Runtime& copy)
 	this->_input_events = copy._input_events;
 
 }
-Runtime::Runtime(const Runtime&& move)
+Runtime::Runtime(const Runtime&& move) noexcept
 {
 	this->_window = move._window;
 	this->_input_events = move._input_events;

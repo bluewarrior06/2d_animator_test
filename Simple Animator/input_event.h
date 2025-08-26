@@ -12,7 +12,7 @@ class InputEvent
 public:
 	InputEvent();
 	InputEvent(const InputEvent& copy);
-	InputEvent(InputEvent&& move);
+	InputEvent(InputEvent&& move) noexcept;
 	~InputEvent();
 
 private:
@@ -30,7 +30,7 @@ public:
 	void poll_events();
 
 	void operator=(const InputEvent& copy);
-	void operator=(InputEvent&& move);
+	void operator=(InputEvent&& move) noexcept;
 };
 
 #endif

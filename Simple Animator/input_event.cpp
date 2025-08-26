@@ -8,7 +8,7 @@ InputEvent::InputEvent(const InputEvent& copy)
 {
 	this->last_event = copy.last_event;
 }
-InputEvent::InputEvent(InputEvent&& move)
+InputEvent::InputEvent(InputEvent&& move) noexcept
 {
 	this->last_event = move.last_event;
 	move.last_event = SDL_Event();
@@ -30,7 +30,7 @@ void InputEvent::operator=(const InputEvent& copy)
 {
 	this->last_event = copy.last_event;
 }
-void InputEvent::operator=(InputEvent&& move)
+void InputEvent::operator=(InputEvent&& move) noexcept
 {
 	this->last_event = move.last_event;
 	move.last_event = SDL_Event();

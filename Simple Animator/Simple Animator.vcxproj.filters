@@ -18,6 +18,12 @@
     <ClCompile Include="input_event.cpp">
       <Filter>runtime\input_events</Filter>
     </ClCompile>
+    <ClCompile Include="updatable_object.cpp">
+      <Filter>runtime\updatable_object</Filter>
+    </ClCompile>
+    <ClCompile Include="updatable_scene.cpp">
+      <Filter>runtime\updatable_object</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="generic">
@@ -40,6 +46,9 @@
     </Filter>
     <Filter Include="runtime\input_events">
       <UniqueIdentifier>{90b93553-82df-4231-9188-ad13c504924b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="runtime\updatable_object">
+      <UniqueIdentifier>{3515a589-bca9-47c3-8cfe-b38d2082f336}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -64,8 +73,15 @@
     <ClInclude Include="input_event.h">
       <Filter>runtime\input_events</Filter>
     </ClInclude>
+    <ClInclude Include="updatable_object.h">
+      <Filter>runtime\updatable_object</Filter>
+    </ClInclude>
+    <ClInclude Include="updatable_scene.h">
+      <Filter>runtime\updatable_object</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="code_structure.txt" />
+    <Text Include="about.txt" />
   </ItemGroup>
 </Project>

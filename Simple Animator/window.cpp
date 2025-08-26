@@ -34,7 +34,7 @@ Window::Window(const Window& copy)
 		);
 	}
 }
-Window::Window(Window&& move)
+Window::Window(Window&& move) noexcept
 {
 	this->_window = move._window;
 	move._window = nullptr;
@@ -70,7 +70,7 @@ void Window::operator=(const Window& copy)
 		);
 	}
 }
-void Window::operator=(Window&& move)
+void Window::operator=(Window&& move) noexcept
 {
 
 }
