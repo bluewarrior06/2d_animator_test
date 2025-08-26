@@ -1,7 +1,4 @@
 C:\libraries\glad 4.6\src\glad.c;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\glad.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\event.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\event.obj
-C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\event_handler.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\event_handler.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\main.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\main.obj
-C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\sdl_event_event.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\sdl_event_event.obj
-C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\sdl_event_event_handler.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\sdl_event_event_handler.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\sdl_event_event_handler.h;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\sdl_event_event_handler.obj

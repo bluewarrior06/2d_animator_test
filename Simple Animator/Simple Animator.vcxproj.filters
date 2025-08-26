@@ -6,16 +6,7 @@
     <ClCompile Include="event.cpp">
       <Filter>generic\event</Filter>
     </ClCompile>
-    <ClCompile Include="event_handler.cpp">
-      <Filter>generic\event</Filter>
-    </ClCompile>
-    <ClCompile Include="sdl_event_event.cpp">
-      <Filter>generic\event\sdl_event</Filter>
-    </ClCompile>
     <ClCompile Include="sdl_event_event_handler.h">
-      <Filter>generic\event\sdl_event</Filter>
-    </ClCompile>
-    <ClCompile Include="sdl_event_event_handler.cpp">
       <Filter>generic\event\sdl_event</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,6 +29,9 @@
       <Filter>generic\event</Filter>
     </ClInclude>
     <ClInclude Include="sdl_event_event.h">
+      <Filter>generic\event\sdl_event</Filter>
+    </ClInclude>
+    <ClInclude Include="window_handler_sdl_event_event.h">
       <Filter>generic\event\sdl_event</Filter>
     </ClInclude>
   </ItemGroup>

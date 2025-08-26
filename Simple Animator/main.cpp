@@ -4,6 +4,9 @@
 
 #include "event_handler.h"
 #include "sdl_event_event_handler.h"
+#include "window_sdl_event.h"
+
+#include "runtime.h"
 
 int main()
 {
@@ -11,15 +14,21 @@ int main()
 
 	SDL_Event last_event = SDL_Event();
 
-	SDLEventEventHandler sdl_event_event_handler = SDLEventEventHandler();
-	sdl_event_event_handler.events.push_back(SDLEventEvent());
+	EventHandler<WindowSDLEvent, SDL_Event> window_events = EventHandler<WindowSDLEvent, SDL_Event>();
+	WindowSDLEvent window_event = WindowSDLEvent();
+	window_event.window = window;
+	window_events.events.push_back(std::move(window_event));
+
+	Runtime runtime = Runtime();
+
+	runtime.begin();
 
 	bool running = true;
 	while (running)
 	{
 		while (SDL_PollEvent(&last_event))
 		{
-			sdl_event_event_handler.activate(last_event);
+			window_events.activate(last_event);
 		}
 	}
 

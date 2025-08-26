@@ -17,7 +17,7 @@ public:
 	}
 	Event(Event& copy)
 	{
-
+		
 	}
 	Event(Event&& move) noexcept
 	{
