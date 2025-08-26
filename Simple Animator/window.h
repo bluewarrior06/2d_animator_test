@@ -19,6 +19,8 @@ private:
 	SDL_Window* _window = nullptr;
 
 public:
+	SDL_Window* get_sdl_window();
+
 	void operator=(const Window& copy);
 	void operator=(Window&& move) noexcept;
 };

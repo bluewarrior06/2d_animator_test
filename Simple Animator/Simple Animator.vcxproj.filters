@@ -3,25 +3,28 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="..\..\..\..\..\..\libraries\glad 4.6\src\glad.c" />
-    <ClCompile Include="event.cpp">
-      <Filter>generic\event</Filter>
-    </ClCompile>
-    <ClCompile Include="sdl_event_event_handler.h">
-      <Filter>generic\event\sdl_event\window</Filter>
-    </ClCompile>
     <ClCompile Include="runtime.cpp">
       <Filter>runtime</Filter>
     </ClCompile>
     <ClCompile Include="window.cpp">
       <Filter>runtime\window</Filter>
     </ClCompile>
-    <ClCompile Include="input_event.cpp">
+    <ClCompile Include="input.cpp">
       <Filter>runtime\input_events</Filter>
     </ClCompile>
     <ClCompile Include="updatable_object.cpp">
       <Filter>runtime\updatable_object</Filter>
     </ClCompile>
     <ClCompile Include="updatable_scene.cpp">
+      <Filter>runtime\updatable_object</Filter>
+    </ClCompile>
+    <ClCompile Include="sdl_event_event_handler.h">
+      <Filter>generic\event\sdl_event</Filter>
+    </ClCompile>
+    <ClCompile Include="sdl_event_event.h">
+      <Filter>generic\event\sdl_event</Filter>
+    </ClCompile>
+    <ClCompile Include="window_handler_updatable_object.cpp">
       <Filter>runtime\updatable_object</Filter>
     </ClCompile>
   </ItemGroup>
@@ -34,9 +37,6 @@
     </Filter>
     <Filter Include="generic\event\sdl_event">
       <UniqueIdentifier>{48568662-034e-4c3b-bc7f-8d81046f88ea}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="generic\event\sdl_event\window">
-      <UniqueIdentifier>{eea1aad0-b2d6-476e-acf7-d647fb1e4122}</UniqueIdentifier>
     </Filter>
     <Filter Include="runtime">
       <UniqueIdentifier>{889ff3fc-6771-42d0-b258-196d059c0833}</UniqueIdentifier>
@@ -58,25 +58,22 @@
     <ClInclude Include="event_handler.h">
       <Filter>generic\event</Filter>
     </ClInclude>
-    <ClInclude Include="sdl_event_event.h">
-      <Filter>generic\event\sdl_event</Filter>
-    </ClInclude>
-    <ClInclude Include="close_window_sdl_event.h">
-      <Filter>generic\event\sdl_event\window</Filter>
-    </ClInclude>
     <ClInclude Include="runtime.h">
       <Filter>runtime</Filter>
     </ClInclude>
     <ClInclude Include="window.h">
       <Filter>runtime\window</Filter>
     </ClInclude>
-    <ClInclude Include="input_event.h">
+    <ClInclude Include="input.h">
       <Filter>runtime\input_events</Filter>
     </ClInclude>
     <ClInclude Include="updatable_object.h">
       <Filter>runtime\updatable_object</Filter>
     </ClInclude>
     <ClInclude Include="updatable_scene.h">
+      <Filter>runtime\updatable_object</Filter>
+    </ClInclude>
+    <ClInclude Include="window_handler_updatable_object.h">
       <Filter>runtime\updatable_object</Filter>
     </ClInclude>
   </ItemGroup>

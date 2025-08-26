@@ -1,5 +1,7 @@
 #include "runtime.h"
 
+GlobalRuntimeBuilder Runtime::_global_builder = GlobalRuntimeBuilder();
+
 Runtime::Runtime(RuntimeBuilder builder)
 {
 	_window = new Window(
@@ -7,11 +9,16 @@ Runtime::Runtime(RuntimeBuilder builder)
 		builder.window_width,
 		builder.window_height,
 		builder.window_flags);
+
+	_gl_context = SDL_GL_CreateContext(_window->get_sdl_window());
+
+	_scene.get_root()._sync(this);
 }
 Runtime::~Runtime()
 {
 	if (_window != nullptr)
 	{
+		
 		delete _window;
 	}
 }
@@ -20,7 +27,41 @@ void Runtime::_mainloop()
 {
 	while (_is_running)
 	{
-		_input_events.poll_events();
+		_input.poll_events();
+		_scene.update_root();
+		_scene.draw_root();
+	}
+}
+
+void Runtime::initialize_globals(GlobalRuntimeBuilder builder)
+{
+	if (builder.opengl_enabled)
+	{
+		SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, builder.opengl_context_major_version);
+		SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, builder.opengl_context_minor_version);
+
+		int opengl_flags = 0;
+		int opengl_profile_flags = 0;
+		if (builder.opengl_enable_debug)
+		{
+			opengl_flags |= SDL_GL_CONTEXT_DEBUG_FLAG;
+		}
+
+		if (builder.opengl_use_compatibility)
+		{
+			opengl_profile_flags |= SDL_GL_CONTEXT_PROFILE_COMPATIBILITY;
+		}
+		if (builder.opengl_use_core)
+		{
+			opengl_profile_flags |= SDL_GL_CONTEXT_PROFILE_CORE;
+		}
+		if (builder.opengl_use_es)
+		{
+			opengl_profile_flags |= SDL_GL_CONTEXT_PROFILE_ES;
+		}
+
+
+		SDL_GL_SetAttribute(SDL_GL_CONTEXT_FLAGS, opengl_flags);
 	}
 }
 
@@ -37,4 +78,13 @@ void Runtime::end()
 bool Runtime::is_currently_running()
 {
 	return _is_running;
+}
+
+UpdatableScene& Runtime::get_updatable_scene()
+{
+	return _scene;
+}
+Input& Runtime::get_input()
+{
+	return _input;
 }

@@ -47,6 +47,11 @@ Window::~Window()
 	}
 }
 
+SDL_Window* Window::get_sdl_window()
+{
+	return _window;
+}
+
 void Window::operator=(const Window& copy)
 {
 	if (this->_window != nullptr)

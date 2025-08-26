@@ -9,7 +9,7 @@
 /// </summary>
 /// <typeparam name="EventArguments">The type of Event class.</typeparam>
 /// <typeparam name="EventType">The type of argument to send to Event</typeparam>
-template <class EventType, class EventArguments>
+template <class EventType, class EventArgumentsType>
 class EventHandler
 {
 public:
@@ -32,7 +32,7 @@ public:
 
 	std::vector<EventType> events;
 
-	void activate(EventArguments arguments)
+	void activate(EventArgumentsType arguments)
 	{
 		for (EventType& event : events)
 		{

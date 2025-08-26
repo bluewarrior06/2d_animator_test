@@ -1,31 +1,15 @@
 #ifndef _SDL_EVENT_EVENT_H_
 #define _SDL_EVENT_EVENT_H_
 
-#include "event.h"
 #include <SDL3/SDL.h>
+#include "event.h"
 
-/// <summary>
-/// Base class for listening to sdl events during runtime.
-/// </summary>
-class SDLEventEvent : public Event<SDL_Event&>
+class SDLEventEvent : public Event<SDL_Event>
 {
 public:
-	SDLEventEvent()
+	void activated(SDL_Event& arguments) override
 	{
-	}
-	SDLEventEvent(SDLEventEvent& copy)
-	{
-	}
-	SDLEventEvent(SDLEventEvent&& move) noexcept
-	{
-	}
-	~SDLEventEvent()
-	{
-	}
 
-public:
-	void activated(SDL_Event event)
-	{
 	}
 };
 

@@ -15,11 +15,11 @@ UpdatableScene::~UpdatableScene()
 
 void UpdatableScene::update_root()
 {
-	_root.update();
+	_root._update_and_propagate();
 }
 void UpdatableScene::draw_root()
 {
-	_root.draw();
+	_root._draw_and_propagate();
 }
 
 UpdatableObject& UpdatableScene::get_root()

@@ -1,7 +1,7 @@
 #ifndef _RUNTIME_H_
 #define _RUNTIME_H_
 
-#include "input_event.h"
+#include "Input.h"
 #include "window.h"
 #include "updatable_scene.h"
 
@@ -13,7 +13,20 @@ struct RuntimeBuilder
 	std::string window_name = "Window";
 	int window_width = 0;
 	int window_height = 0;
-	SDL_WindowFlags window_flags = SDL_WINDOW_RESIZABLE;
+	SDL_WindowFlags window_flags = 0;
+
+	
+};
+
+struct GlobalRuntimeBuilder
+{
+	bool opengl_enabled = false;
+	int opengl_context_major_version = 1;
+	int opengl_context_minor_version = 1;
+	bool opengl_enable_debug = false;
+	bool opengl_use_compatibility = false;
+	bool opengl_use_core = false;
+	bool opengl_use_es = false;
 };
 
 /// <summary>
@@ -26,15 +39,20 @@ public:
 	~Runtime();
 
 private:
+	static GlobalRuntimeBuilder _global_builder;
+
 	Window* _window = nullptr;
-	InputEvent _input_events = InputEvent();
-	UpdatableScene scene = UpdatableScene();
+	SDL_GLContext _gl_context = nullptr;
+	Input _input = Input();
+	UpdatableScene _scene = UpdatableScene();
 
 	bool _is_running = false;
 	
 	void _mainloop();
 
 public:
+	static void initialize_globals(GlobalRuntimeBuilder builder);
+
 	// Begins the mainloop.
 	void begin();
 	// Ends the mainloop.
@@ -44,6 +62,8 @@ public:
 	// If the runtime object is currently running.
 	bool is_currently_running();
 
+	UpdatableScene& get_updatable_scene();
+	Input& get_input();
 };
 
 #endif
