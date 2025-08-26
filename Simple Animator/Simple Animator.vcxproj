@@ -139,10 +139,17 @@
     <ClCompile Include="event.cpp" />
     <ClCompile Include="event_handler.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="sdl_event_event.cpp" />
+    <ClCompile Include="sdl_event_event_handler.cpp" />
+    <ClCompile Include="sdl_event_event_handler.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="event.h" />
     <ClInclude Include="event_handler.h" />
+    <ClInclude Include="sdl_event_event.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="code_structure.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

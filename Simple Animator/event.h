@@ -30,7 +30,6 @@ public:
 
 	virtual void activated(EventArguments& arguments)
 	{
-		printf("Listened!");
 	}
 };
 

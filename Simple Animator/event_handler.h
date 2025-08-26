@@ -4,7 +4,12 @@
 #include <vector>
 #include "event.h"
 
-template <class EventArguments>
+/// <summary>
+/// 
+/// </summary>
+/// <typeparam name="EventArguments">The type of Event class.</typeparam>
+/// <typeparam name="EventType">The type of argument to send to Event</typeparam>
+template <class EventType, class EventArguments>
 class EventHandler
 {
 public:
@@ -25,11 +30,11 @@ public:
 
 	}
 
-	std::vector<Event<EventArguments>> events;
+	std::vector<EventType> events;
 
 	void activate(EventArguments arguments)
 	{
-		for (Event<EventArguments>& event : events)
+		for (EventType& event : events)
 		{
 			event.activated(arguments);
 		}
