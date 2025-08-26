@@ -1,36 +1,26 @@
 #include "updatable_object.h"
 
+#include <stdio.h>
+
 UpdatableObject::UpdatableObject()
 {
-
 }
 UpdatableObject::UpdatableObject(const UpdatableObject& copy)
 {
-
-}
-UpdatableObject::UpdatableObject(UpdatableObject&& move) noexcept
-{
-
+	this->_name = copy._name;
 }
 UpdatableObject::~UpdatableObject()
 {
-
 }
 
-void UpdatableObject::_update()
+void UpdatableObject::update()
 {
-
 }
-void UpdatableObject::_draw()
+void UpdatableObject::draw()
 {
-
 }
 
 void UpdatableObject::operator=(const UpdatableObject& copy)
 {
-
-}
-void UpdatableObject::operator=(UpdatableObject&& move) noexcept
-{
-
+	this->_name = copy._name;
 }
