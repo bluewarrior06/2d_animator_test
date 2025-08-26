@@ -21,7 +21,7 @@ public:
 	{
 
 	}
-	EventHandler(EventHandler&& move)
+	EventHandler(EventHandler&& move) noexcept
 	{
 
 	}

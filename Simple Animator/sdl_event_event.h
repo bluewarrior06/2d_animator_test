@@ -12,6 +12,7 @@ class SDLEventEvent : public Event<SDL_Event&>
 public:
 	SDLEventEvent()
 	{
+		printf("CTOR\n");
 	}
 	SDLEventEvent(SDLEventEvent& copy)
 	{

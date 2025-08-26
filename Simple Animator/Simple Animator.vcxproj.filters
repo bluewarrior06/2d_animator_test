@@ -7,18 +7,39 @@
       <Filter>generic\event</Filter>
     </ClCompile>
     <ClCompile Include="sdl_event_event_handler.h">
-      <Filter>generic\event\sdl_event</Filter>
+      <Filter>generic\event\sdl_event\window</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime.cpp">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="window.cpp">
+      <Filter>runtime\window</Filter>
+    </ClCompile>
+    <ClCompile Include="input_event.cpp">
+      <Filter>runtime\input_events</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="generic">
-      <UniqueIdentifier>{be19b189-4dce-4a36-b41e-7c341188f43c}</UniqueIdentifier>
+      <UniqueIdentifier>{76af6fc7-7c5b-4e08-af90-08f1fcc50e04}</UniqueIdentifier>
     </Filter>
     <Filter Include="generic\event">
       <UniqueIdentifier>{63dd1f2b-7026-40f3-be80-08a31b0d7f8c}</UniqueIdentifier>
     </Filter>
     <Filter Include="generic\event\sdl_event">
       <UniqueIdentifier>{48568662-034e-4c3b-bc7f-8d81046f88ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generic\event\sdl_event\window">
+      <UniqueIdentifier>{eea1aad0-b2d6-476e-acf7-d647fb1e4122}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="runtime">
+      <UniqueIdentifier>{889ff3fc-6771-42d0-b258-196d059c0833}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="runtime\window">
+      <UniqueIdentifier>{5c9626ec-c21e-4f51-a140-d3255ecd49af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="runtime\input_events">
+      <UniqueIdentifier>{90b93553-82df-4231-9188-ad13c504924b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -31,8 +52,17 @@
     <ClInclude Include="sdl_event_event.h">
       <Filter>generic\event\sdl_event</Filter>
     </ClInclude>
-    <ClInclude Include="window_handler_sdl_event_event.h">
-      <Filter>generic\event\sdl_event</Filter>
+    <ClInclude Include="close_window_sdl_event.h">
+      <Filter>generic\event\sdl_event\window</Filter>
+    </ClInclude>
+    <ClInclude Include="runtime.h">
+      <Filter>runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="window.h">
+      <Filter>runtime\window</Filter>
+    </ClInclude>
+    <ClInclude Include="input_event.h">
+      <Filter>runtime\input_events</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

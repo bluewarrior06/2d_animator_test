@@ -137,14 +137,20 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\..\..\..\libraries\glad 4.6\src\glad.c" />
     <ClCompile Include="event.cpp" />
+    <ClCompile Include="input_event.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="runtime.cpp" />
     <ClCompile Include="sdl_event_event_handler.h" />
+    <ClCompile Include="window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="close_window_sdl_event.h" />
     <ClInclude Include="event.h" />
     <ClInclude Include="event_handler.h" />
+    <ClInclude Include="input_event.h" />
+    <ClInclude Include="runtime.h" />
     <ClInclude Include="sdl_event_event.h" />
-    <ClInclude Include="window_handler_sdl_event_event.h" />
+    <ClInclude Include="window.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="code_structure.txt" />
