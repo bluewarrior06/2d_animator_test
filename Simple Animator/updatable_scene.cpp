@@ -4,11 +4,6 @@ UpdatableScene::UpdatableScene()
 {
 	_root._name = "root";
 }
-UpdatableScene::UpdatableScene(const UpdatableScene& copy)
-{
-	printf("COPY\n");
-	this->_root = copy._root;
-}
 UpdatableScene::~UpdatableScene()
 {
 }
@@ -25,9 +20,4 @@ void UpdatableScene::draw_root()
 UpdatableObject& UpdatableScene::get_root()
 {
 	return _root;
-}
-
-void UpdatableScene::operator=(const UpdatableScene& copy)
-{
-
 }

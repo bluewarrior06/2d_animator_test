@@ -15,8 +15,6 @@ struct RuntimeBuilder
 	int window_width = 0;
 	int window_height = 0;
 	SDL_WindowFlags window_flags = 0;
-
-	
 };
 
 struct GlobalRuntimeBuilder
@@ -32,6 +30,12 @@ struct GlobalRuntimeBuilder
 
 /// <summary>
 /// Encapsulates runtime logic into a single class.
+/// 
+/// Holds a window to display visuals.
+/// Holds an Input for reading input.
+/// Holds an UpdatableScene for dynamic objects.
+/// 
+/// Holds Servers for individualized processing. Each server will process its own information.
 /// </summary>
 class Runtime
 {
@@ -42,12 +46,14 @@ public:
 private:
 	static GlobalRuntimeBuilder _global_builder;
 
-	Window* _window = nullptr;
-	SDL_GLContext _gl_context = nullptr;
+	RuntimeBuilder _builder;
+
+	Window _window;
+
 	Input _input = Input();
 	UpdatableScene _scene = UpdatableScene();
 
-	RenderingServer rendering_server = RenderingServer(this);
+	RenderingServer _rendering_server;
 
 	bool _is_running = false;
 	
@@ -61,14 +67,20 @@ public:
 	// Begins the mainloop.
 	void begin();
 	// Ends the mainloop.
-	// The mainloop will end once the loop is done processing a loop.
+	// The mainloop will fully end once the mainloop is done its cycle.
 	void end();
 
 	// If the runtime object is currently running.
+	// Will begin returning right after false, though the program may still be running,
+	// since the application only will truly stop running once the mainloop finishes its cycle.
 	bool is_currently_running();
+
+	const GlobalRuntimeBuilder& get_global_builder();
+	const RuntimeBuilder& get_builder();
 
 	UpdatableScene& get_updatable_scene();
 	Input& get_input();
+	Window& get_window();
 };
 
 #endif

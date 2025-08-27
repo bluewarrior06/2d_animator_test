@@ -11,7 +11,6 @@ class UpdatableScene
 {
 public:
 	UpdatableScene();
-	UpdatableScene(const UpdatableScene& copy);
 	~UpdatableScene();
 
 private:
@@ -31,8 +30,6 @@ public:
 	void draw_root();
 
 	UpdatableObject& get_root();
-
-	virtual void operator=(const UpdatableScene& copy);
 };
 
 #endif

@@ -19,10 +19,41 @@ int main()
 	builder.window_name = "Window";
 	builder.window_width = 512;
 	builder.window_height = 512;
-	builder.window_flags = SDL_WINDOW_RESIZABLE;
+	builder.window_flags = SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL;
 
 	Runtime runtime = Runtime(builder);
 	
+	GLuint vertex_shader = RenderingServerUtility::create_shader(GL_VERTEX_SHADER);
+	GLuint fragment_shader = RenderingServerUtility::create_shader(GL_FRAGMENT_SHADER);
+
+	RenderingServerUtility::set_shader_source(vertex_shader,
+		"#version 430\n"
+		"\n"
+		"layout(location = 0) in vec3 VERTEX_POSITION;\n"
+		"\n"
+		"void main()\n"
+		"{\n"
+		"	gl_Position = vec4(VERTEX_POSITION);\n"
+		"}\n");
+	RenderingServerUtility::set_shader_source(fragment_shader,
+		"#version 430\n"
+		"\n"
+		"out vec4 fragment_color;\n"
+		"\n"
+		"void main()\n"
+		"{\n"
+		"	fragment_color = vec4(1.0f);\n"
+		"}\n"
+	);
+
+	RenderingServerUtility::compile_shader(vertex_shader);
+	RenderingServerUtility::compile_shader(fragment_shader);
+
+	std::string vertex_compile_result = std::string("vertex result: ") + RenderingServerUtility::get_shader_info_log(vertex_shader);
+	std::string fragment_compile_result = std::string("fragment result: ") + RenderingServerUtility::get_shader_info_log(fragment_shader);
+	printf("%s\n", vertex_compile_result.c_str());
+	printf("%s\n", fragment_compile_result.c_str());
+
 	UpdatableObject& runtime_root = runtime.get_updatable_scene().get_root();
 
 	runtime.begin();

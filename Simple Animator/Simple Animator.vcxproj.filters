@@ -39,6 +39,9 @@
     <ClCompile Include="color.cpp">
       <Filter>generic\color</Filter>
     </ClCompile>
+    <ClCompile Include="rendering_server_utility.cpp">
+      <Filter>runtime\server\rendering</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="generic">
@@ -114,6 +117,9 @@
     </ClInclude>
     <ClInclude Include="color.h">
       <Filter>generic\color</Filter>
+    </ClInclude>
+    <ClInclude Include="rendering_server_utility.h">
+      <Filter>runtime\server\rendering</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

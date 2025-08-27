@@ -6,15 +6,14 @@
 GlobalRuntimeBuilder Runtime::_global_builder = GlobalRuntimeBuilder();
 
 Runtime::Runtime(RuntimeBuilder builder)
-{
-	_window = new Window(
+	: _window(
 		builder.window_name,
 		builder.window_width,
 		builder.window_height,
-		builder.window_flags);
+		builder.window_flags)
 
-	_gl_context = SDL_GL_CreateContext(_window->get_sdl_window());
-
+	,_rendering_server(this)
+{
 	_scene.get_root()._sync(this);
 
 	WindowHandlerUpdatableObject* window_handler = new WindowHandlerUpdatableObject();
@@ -23,14 +22,11 @@ Runtime::Runtime(RuntimeBuilder builder)
 	_scene.get_root().add_child(window_handler);
 	_scene.get_root().add_child(rendering_server);
 
+	_builder = builder;
 }
 Runtime::~Runtime()
 {
-	if (_window != nullptr)
-	{
-		
-		delete _window;
-	}
+	SDL_Quit();
 }
 
 void Runtime::_mainloop()
@@ -46,15 +42,17 @@ void Runtime::_mainloop()
 }
 void Runtime::_pre_update_servers()
 {
-	rendering_server.pre_update(this);
+	_rendering_server.pre_update(this);
 }
 void Runtime::_post_update_servers()
 {
-	rendering_server.post_update(this);
+	_rendering_server.post_update(this);
 }
 
 void Runtime::initialize_globals(GlobalRuntimeBuilder builder)
 {
+	SDL_Init(SDL_INIT_VIDEO);
+
 	if (builder.opengl_enabled)
 	{
 		SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, builder.opengl_context_major_version);
@@ -79,10 +77,12 @@ void Runtime::initialize_globals(GlobalRuntimeBuilder builder)
 		{
 			opengl_profile_flags |= SDL_GL_CONTEXT_PROFILE_ES;
 		}
-
-
+	
 		SDL_GL_SetAttribute(SDL_GL_CONTEXT_FLAGS, opengl_flags);
+		SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, opengl_profile_flags);
 	}
+
+	_global_builder = builder;
 }
 
 void Runtime::begin()
@@ -100,6 +100,14 @@ bool Runtime::is_currently_running()
 	return _is_running;
 }
 
+const GlobalRuntimeBuilder& Runtime::get_global_builder()
+{
+	return _global_builder;
+}
+const RuntimeBuilder& Runtime::get_builder()
+{
+	return _builder;
+}
 UpdatableScene& Runtime::get_updatable_scene()
 {
 	return _scene;
@@ -107,4 +115,8 @@ UpdatableScene& Runtime::get_updatable_scene()
 Input& Runtime::get_input()
 {
 	return _input;
+}
+Window& Runtime::get_window()
+{
+	return _window;
 }

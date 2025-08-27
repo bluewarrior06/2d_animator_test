@@ -139,6 +139,7 @@
     <ClCompile Include="color.cpp" />
     <ClCompile Include="input.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="rendering_server_utility.cpp" />
     <ClCompile Include="rendering_server_updatable_object.cpp" />
     <ClCompile Include="rendering_server.cpp" />
     <ClCompile Include="runtime.cpp" />
@@ -155,6 +156,7 @@
     <ClInclude Include="event.h" />
     <ClInclude Include="event_handler.h" />
     <ClInclude Include="input.h" />
+    <ClInclude Include="rendering_server_utility.h" />
     <ClInclude Include="rendering_server_updatable_object.h" />
     <ClInclude Include="rendering_server.h" />
     <ClInclude Include="runtime.h" />

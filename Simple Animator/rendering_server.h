@@ -2,9 +2,10 @@
 #define _RENDERING_SERVER_H_
 
 #include <string>
+#include <SDL3/SDL.h>
 #include <glad/glad.h>
 #include "server.h"
-#include "rendering_server_supplier.h"
+#include "rendering_server_utility.h"
 
 /// <summary>
 /// Coordinates many rendering commands into a single class.
@@ -19,12 +20,18 @@ public:
 	RenderingServer(Runtime* server);
 	~RenderingServer() override;
 
+private:
+	SDL_GLContext _gl_context = nullptr;
+
 public:
+
 	// The minimum version of OpenGL required.
 	static const int OPENGL_MINIMUM_VERSION = 4;
 	// The maximum version of OpenGL required.
 	static const int OPENGL_MAXIMUM_VERSION = 6;
 
+	void pre_update(Runtime* runtime) override;
+	void post_update(Runtime* runtime) override;
 };
 
 #endif
