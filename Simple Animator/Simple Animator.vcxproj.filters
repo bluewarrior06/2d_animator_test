@@ -19,10 +19,10 @@
       <Filter>runtime\updatable_object</Filter>
     </ClCompile>
     <ClCompile Include="sdl_event_event_handler.h">
-      <Filter>generic\event\sdl_event</Filter>
+      <Filter>type\event\sdl_event</Filter>
     </ClCompile>
     <ClCompile Include="sdl_event_event.h">
-      <Filter>generic\event\sdl_event</Filter>
+      <Filter>type\event\sdl_event</Filter>
     </ClCompile>
     <ClCompile Include="window_handler_updatable_object.cpp">
       <Filter>runtime\updatable_object</Filter>
@@ -37,22 +37,19 @@
       <Filter>runtime\updatable_object\server</Filter>
     </ClCompile>
     <ClCompile Include="color.cpp">
-      <Filter>generic\color</Filter>
+      <Filter>type\color</Filter>
     </ClCompile>
     <ClCompile Include="rendering_server_utility.cpp">
       <Filter>runtime\server\rendering</Filter>
     </ClCompile>
+    <ClCompile Include="mesh_builder.cpp">
+      <Filter>type\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh_builder_vertex.cpp">
+      <Filter>type\mesh</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="generic">
-      <UniqueIdentifier>{76af6fc7-7c5b-4e08-af90-08f1fcc50e04}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="generic\event">
-      <UniqueIdentifier>{63dd1f2b-7026-40f3-be80-08a31b0d7f8c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="generic\event\sdl_event">
-      <UniqueIdentifier>{48568662-034e-4c3b-bc7f-8d81046f88ea}</UniqueIdentifier>
-    </Filter>
     <Filter Include="runtime">
       <UniqueIdentifier>{889ff3fc-6771-42d0-b258-196d059c0833}</UniqueIdentifier>
     </Filter>
@@ -74,19 +71,31 @@
     <Filter Include="runtime\updatable_object\server">
       <UniqueIdentifier>{ff1f273b-fa3c-4568-ac44-524688f03e89}</UniqueIdentifier>
     </Filter>
-    <Filter Include="generic\color">
+    <Filter Include="type">
+      <UniqueIdentifier>{76af6fc7-7c5b-4e08-af90-08f1fcc50e04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="type\event">
+      <UniqueIdentifier>{63dd1f2b-7026-40f3-be80-08a31b0d7f8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="type\event\sdl_event">
+      <UniqueIdentifier>{48568662-034e-4c3b-bc7f-8d81046f88ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="type\color">
       <UniqueIdentifier>{a267103a-0d5d-4c3f-a783-1bfd1e50202a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="generic\math">
+    <Filter Include="type\math">
       <UniqueIdentifier>{d621cbd0-ca36-4ded-a322-bb266fc0b4db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="type\mesh">
+      <UniqueIdentifier>{2ab09941-7519-4e88-83ce-76ee3d891c79}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="event.h">
-      <Filter>generic\event</Filter>
+      <Filter>type\event</Filter>
     </ClInclude>
     <ClInclude Include="event_handler.h">
-      <Filter>generic\event</Filter>
+      <Filter>type\event</Filter>
     </ClInclude>
     <ClInclude Include="runtime.h">
       <Filter>runtime</Filter>
@@ -116,10 +125,16 @@
       <Filter>runtime\updatable_object\server</Filter>
     </ClInclude>
     <ClInclude Include="color.h">
-      <Filter>generic\color</Filter>
+      <Filter>type\color</Filter>
     </ClInclude>
     <ClInclude Include="rendering_server_utility.h">
       <Filter>runtime\server\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh_builder.h">
+      <Filter>type\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh_builder_vertex.h">
+      <Filter>type\mesh</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
