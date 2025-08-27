@@ -10,7 +10,7 @@
       <Filter>runtime\window</Filter>
     </ClCompile>
     <ClCompile Include="input.cpp">
-      <Filter>runtime\input_events</Filter>
+      <Filter>runtime\input</Filter>
     </ClCompile>
     <ClCompile Include="updatable_object.cpp">
       <Filter>runtime\updatable_object</Filter>
@@ -26,6 +26,18 @@
     </ClCompile>
     <ClCompile Include="window_handler_updatable_object.cpp">
       <Filter>runtime\updatable_object</Filter>
+    </ClCompile>
+    <ClCompile Include="server.cpp">
+      <Filter>runtime\server</Filter>
+    </ClCompile>
+    <ClCompile Include="rendering_server.cpp">
+      <Filter>runtime\server\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="rendering_server_updatable_object.cpp">
+      <Filter>runtime\updatable_object\server</Filter>
+    </ClCompile>
+    <ClCompile Include="color.cpp">
+      <Filter>generic\color</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -44,11 +56,26 @@
     <Filter Include="runtime\window">
       <UniqueIdentifier>{5c9626ec-c21e-4f51-a140-d3255ecd49af}</UniqueIdentifier>
     </Filter>
-    <Filter Include="runtime\input_events">
-      <UniqueIdentifier>{90b93553-82df-4231-9188-ad13c504924b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="runtime\updatable_object">
       <UniqueIdentifier>{3515a589-bca9-47c3-8cfe-b38d2082f336}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="runtime\server">
+      <UniqueIdentifier>{e0aaea0e-412e-4570-a655-9f7ed7cda3e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="runtime\input">
+      <UniqueIdentifier>{90b93553-82df-4231-9188-ad13c504924b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="runtime\server\rendering">
+      <UniqueIdentifier>{f49e578e-5ade-43bc-81c4-cf9e26ad56af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="runtime\updatable_object\server">
+      <UniqueIdentifier>{ff1f273b-fa3c-4568-ac44-524688f03e89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generic\color">
+      <UniqueIdentifier>{a267103a-0d5d-4c3f-a783-1bfd1e50202a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generic\math">
+      <UniqueIdentifier>{d621cbd0-ca36-4ded-a322-bb266fc0b4db}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -65,7 +92,7 @@
       <Filter>runtime\window</Filter>
     </ClInclude>
     <ClInclude Include="input.h">
-      <Filter>runtime\input_events</Filter>
+      <Filter>runtime\input</Filter>
     </ClInclude>
     <ClInclude Include="updatable_object.h">
       <Filter>runtime\updatable_object</Filter>
@@ -75,6 +102,18 @@
     </ClInclude>
     <ClInclude Include="window_handler_updatable_object.h">
       <Filter>runtime\updatable_object</Filter>
+    </ClInclude>
+    <ClInclude Include="server.h">
+      <Filter>runtime\server</Filter>
+    </ClInclude>
+    <ClInclude Include="rendering_server.h">
+      <Filter>runtime\server\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="rendering_server_updatable_object.h">
+      <Filter>runtime\updatable_object\server</Filter>
+    </ClInclude>
+    <ClInclude Include="color.h">
+      <Filter>generic\color</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

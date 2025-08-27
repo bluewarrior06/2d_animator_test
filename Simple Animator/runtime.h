@@ -4,6 +4,7 @@
 #include "Input.h"
 #include "window.h"
 #include "updatable_scene.h"
+#include "rendering_server.h"
 
 /// <summary>
 /// Holds properties to be passed int a Runtime object during construction.
@@ -45,6 +46,8 @@ private:
 	SDL_GLContext _gl_context = nullptr;
 	Input _input = Input();
 	UpdatableScene _scene = UpdatableScene();
+
+	RenderingServer rendering_server = RenderingServer(this);
 
 	bool _is_running = false;
 	

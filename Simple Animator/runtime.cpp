@@ -1,5 +1,8 @@
 #include "runtime.h"
 
+#include "window_handler_updatable_object.h"
+#include "rendering_server_updatable_object.h"
+
 GlobalRuntimeBuilder Runtime::_global_builder = GlobalRuntimeBuilder();
 
 Runtime::Runtime(RuntimeBuilder builder)
@@ -13,6 +16,13 @@ Runtime::Runtime(RuntimeBuilder builder)
 	_gl_context = SDL_GL_CreateContext(_window->get_sdl_window());
 
 	_scene.get_root()._sync(this);
+
+	WindowHandlerUpdatableObject* window_handler = new WindowHandlerUpdatableObject();
+	RenderingServerUpdatableObject* rendering_server = new RenderingServerUpdatableObject();
+	
+	_scene.get_root().add_child(window_handler);
+	_scene.get_root().add_child(rendering_server);
+
 }
 Runtime::~Runtime()
 {
@@ -36,11 +46,11 @@ void Runtime::_mainloop()
 }
 void Runtime::_pre_update_servers()
 {
-
+	rendering_server.pre_update(this);
 }
 void Runtime::_post_update_servers()
 {
-
+	rendering_server.post_update(this);
 }
 
 void Runtime::initialize_globals(GlobalRuntimeBuilder builder)

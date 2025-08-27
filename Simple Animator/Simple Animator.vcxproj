@@ -136,21 +136,29 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\..\..\libraries\glad 4.6\src\glad.c" />
+    <ClCompile Include="color.cpp" />
     <ClCompile Include="input.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="rendering_server_updatable_object.cpp" />
+    <ClCompile Include="rendering_server.cpp" />
     <ClCompile Include="runtime.cpp" />
     <ClCompile Include="sdl_event_event.h" />
     <ClCompile Include="sdl_event_event_handler.h" />
+    <ClCompile Include="server.cpp" />
     <ClCompile Include="updatable_object.cpp" />
     <ClCompile Include="updatable_scene.cpp" />
     <ClCompile Include="window.cpp" />
     <ClCompile Include="window_handler_updatable_object.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="color.h" />
     <ClInclude Include="event.h" />
     <ClInclude Include="event_handler.h" />
     <ClInclude Include="input.h" />
+    <ClInclude Include="rendering_server_updatable_object.h" />
+    <ClInclude Include="rendering_server.h" />
     <ClInclude Include="runtime.h" />
+    <ClInclude Include="server.h" />
     <ClInclude Include="updatable_object.h" />
     <ClInclude Include="updatable_scene.h" />
     <ClInclude Include="window.h" />

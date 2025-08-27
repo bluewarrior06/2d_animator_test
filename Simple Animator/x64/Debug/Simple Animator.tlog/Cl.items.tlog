@@ -1,9 +1,13 @@
 C:\libraries\glad 4.6\src\glad.c;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\glad.obj
+C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\color.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\color.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\input.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\input.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\main.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\main.obj
+C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\rendering_server_updatable_object.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\rendering_server_updatable_object.obj
+C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\rendering_server.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\rendering_server.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\runtime.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\runtime.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\sdl_event_event.h;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\sdl_event_event.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\sdl_event_event_handler.h;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\sdl_event_event_handler.obj
+C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\server.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\server.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\updatable_object.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\updatable_object.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\updatable_scene.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\updatable_scene.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\window.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\window.obj

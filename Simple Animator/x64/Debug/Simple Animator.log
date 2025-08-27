@@ -1,9 +1,4 @@
-﻿  main.cpp
-  runtime.cpp
-  updatable_object.cpp
-  updatable_scene.cpp
-  window_handler_updatable_object.cpp
-  Generating Code...
+﻿  color.cpp
   Simple Animator.vcxproj -> C:\Users\Joey Merryfield\source\repos\Simple Animator\x64\Debug\Simple Animator.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

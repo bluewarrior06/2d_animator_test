@@ -4,10 +4,10 @@
 
 #include "updatable_scene.h"
 #include "runtime.h"
-#include "window_handler_updatable_object.h"
 
 int main()
 {
+	
 	GlobalRuntimeBuilder global_builder = GlobalRuntimeBuilder();
 	global_builder.opengl_enabled = true;
 	global_builder.opengl_context_major_version = 4;
@@ -24,8 +24,6 @@ int main()
 	Runtime runtime = Runtime(builder);
 	
 	UpdatableObject& runtime_root = runtime.get_updatable_scene().get_root();
-	WindowHandlerUpdatableObject* window_handler = new WindowHandlerUpdatableObject();
-	runtime_root.add_child(window_handler);
 
 	runtime.begin();
 
