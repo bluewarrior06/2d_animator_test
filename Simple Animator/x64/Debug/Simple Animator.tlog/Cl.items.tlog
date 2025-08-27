@@ -1,9 +1,11 @@
 C:\libraries\glad 4.6\src\glad.c;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\glad.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\color.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\color.obj
+C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\debug_updatable_object.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\debug_updatable_object.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\input.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\input.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\main.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\main.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\mesh_builder.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\mesh_builder.obj
-C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\mesh_builder_vertex.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\mesh_builder_vertex.obj
+C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\mesh_builder_attribute.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\mesh_builder_attribute.obj
+C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\mesh_builder_attrib_set.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\mesh_builder_attrib_set.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\rendering_server_utility.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\rendering_server_utility.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\rendering_server_updatable_object.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\rendering_server_updatable_object.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\rendering_server.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\rendering_server.obj

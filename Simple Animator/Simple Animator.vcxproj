@@ -137,10 +137,12 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\..\..\..\libraries\glad 4.6\src\glad.c" />
     <ClCompile Include="color.cpp" />
+    <ClCompile Include="debug_updatable_object.cpp" />
     <ClCompile Include="input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mesh_builder.cpp" />
-    <ClCompile Include="mesh_builder_vertex.cpp" />
+    <ClCompile Include="mesh_builder_attribute.cpp" />
+    <ClCompile Include="mesh_builder_attrib_set.cpp" />
     <ClCompile Include="rendering_server_utility.cpp" />
     <ClCompile Include="rendering_server_updatable_object.cpp" />
     <ClCompile Include="rendering_server.cpp" />
@@ -156,11 +158,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="color.h" />
+    <ClInclude Include="debug_updatable_object.h" />
     <ClInclude Include="event.h" />
     <ClInclude Include="event_handler.h" />
     <ClInclude Include="input.h" />
     <ClInclude Include="mesh_builder.h" />
-    <ClInclude Include="mesh_builder_vertex.h" />
+    <ClInclude Include="mesh_builder_attribute.h" />
+    <ClInclude Include="mesh_builder_attrib_set.h" />
     <ClInclude Include="rendering_server_utility.h" />
     <ClInclude Include="rendering_server_updatable_object.h" />
     <ClInclude Include="rendering_server.h" />

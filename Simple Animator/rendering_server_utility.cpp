@@ -75,3 +75,60 @@ std::vector<ProgramUniformInfo> RenderingServerUtility::get_active_uniforms(GLui
 
 	return uniforms;
 }
+
+GLuint RenderingServerUtility::create_buffer()
+{
+	GLuint buffer = 0;
+	glCreateBuffers(1, &buffer);
+	return buffer;
+}
+void RenderingServerUtility::destroy_buffer(GLuint buffer)
+{
+	glDeleteBuffers(1, &buffer);
+}
+bool RenderingServerUtility::is_buffer_initialized(GLuint buffer)
+{
+	int is_initialized = GL_FALSE;
+	glGetNamedBufferParameteriv(buffer, GL_BUFFER_SIZE, &is_initialized);
+	return is_initialized == GL_TRUE;
+}
+void RenderingServerUtility::set_vertex_buffer(GLuint buffer, const std::vector<unsigned char>& data)
+{
+	bool buffer_already_initialized = is_buffer_initialized(buffer);
+	if (buffer_already_initialized)
+	{
+		glNamedBufferSubData(buffer, 0, data.size(), data.data());
+	}
+	else
+	{
+		glNamedBufferData(buffer, data.size(), data.data(), GL_STATIC_DRAW);
+
+	}
+}
+
+GLuint RenderingServerUtility::create_vertex_array()
+{
+	GLuint vertex_array_object = 0;
+	glCreateVertexArrays(1, &vertex_array_object);
+	return vertex_array_object;
+}
+void RenderingServerUtility::destroy_vertex_array(GLuint vertex_array)
+{
+	glDeleteVertexArrays(1, &vertex_array);
+}
+void RenderingServerUtility::associate_vbo_with_vao_as_standard_2d(GLuint vertex_array, GLuint vertex_buffer)
+{
+	glEnableVertexArrayAttrib(vertex_array, 0);
+	glEnableVertexArrayAttrib(vertex_array, 1);
+
+	glVertexArrayAttribFormat(vertex_array, 0, 2, GL_FLOAT, GL_FALSE, 0);
+	glVertexArrayAttribFormat(vertex_array, 1, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float));
+
+	glVertexArrayVertexBuffer(vertex_array, 0, vertex_buffer, 0, 2 * sizeof(float) + 2 * sizeof(float));
+	glVertexArrayAttribBinding(vertex_array, 0, 0);
+	glVertexArrayAttribBinding(vertex_array, 1, 0);
+}
+void RenderingServerUtility::bind_vertex_array(GLuint vertex_array)
+{
+	glBindVertexArray(vertex_array);
+}

@@ -43,13 +43,19 @@
       <Filter>runtime\server\rendering</Filter>
     </ClCompile>
     <ClCompile Include="mesh_builder.cpp">
-      <Filter>type\mesh</Filter>
+      <Filter>type\mesh_builder</Filter>
     </ClCompile>
-    <ClCompile Include="mesh_builder_vertex.cpp">
-      <Filter>type\mesh</Filter>
+    <ClCompile Include="mesh_builder_attrib_set.cpp">
+      <Filter>type\mesh_builder</Filter>
     </ClCompile>
     <ClCompile Include="vector2.cpp">
       <Filter>type\math\vector</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh_builder_attribute.cpp">
+      <Filter>type\mesh_builder</Filter>
+    </ClCompile>
+    <ClCompile Include="debug_updatable_object.cpp">
+      <Filter>runtime\updatable_object\playground</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -89,11 +95,14 @@
     <Filter Include="type\math">
       <UniqueIdentifier>{d621cbd0-ca36-4ded-a322-bb266fc0b4db}</UniqueIdentifier>
     </Filter>
-    <Filter Include="type\mesh">
-      <UniqueIdentifier>{2ab09941-7519-4e88-83ce-76ee3d891c79}</UniqueIdentifier>
-    </Filter>
     <Filter Include="type\math\vector">
       <UniqueIdentifier>{32c472ed-652b-4f4b-845c-b756bad0608e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="type\mesh_builder">
+      <UniqueIdentifier>{2ab09941-7519-4e88-83ce-76ee3d891c79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="runtime\updatable_object\playground">
+      <UniqueIdentifier>{5d94b901-e60e-43ec-afc5-18c6837d29be}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -137,13 +146,19 @@
       <Filter>runtime\server\rendering</Filter>
     </ClInclude>
     <ClInclude Include="mesh_builder.h">
-      <Filter>type\mesh</Filter>
+      <Filter>type\mesh_builder</Filter>
     </ClInclude>
-    <ClInclude Include="mesh_builder_vertex.h">
-      <Filter>type\mesh</Filter>
+    <ClInclude Include="mesh_builder_attrib_set.h">
+      <Filter>type\mesh_builder</Filter>
     </ClInclude>
     <ClInclude Include="vector2.h">
       <Filter>type\math\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh_builder_attribute.h">
+      <Filter>type\mesh_builder</Filter>
+    </ClInclude>
+    <ClInclude Include="debug_updatable_object.h">
+      <Filter>runtime\updatable_object\playground</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

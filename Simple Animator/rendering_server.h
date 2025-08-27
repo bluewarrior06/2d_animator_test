@@ -17,7 +17,7 @@ class RenderingServer : public Server
 {
 
 public:
-	RenderingServer(Runtime* server);
+	RenderingServer(Runtime* runtime);
 	~RenderingServer() override;
 
 private:
