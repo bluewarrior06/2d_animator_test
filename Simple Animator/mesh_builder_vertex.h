@@ -2,12 +2,18 @@
 #define _MESH_BUILDER_VERTEX_H_
 
 #include <vector>
+#include "vector2.h"
 
-template<class T, T default_value>
-class MeshBuilderComponent
+template<class T>
+class MeshBuilderAttribute
 {
 public:
-	int value = default_value;
+	MeshBuilderAttribute()
+	{
+
+	}
+
+	T value;
 
 	virtual void push_to_buffer(std::vector<unsigned char>& buffer)
 	{
@@ -21,15 +27,37 @@ public:
 	};
 };
 
-class MeshBuilderComponentFloat : public MeshBuilderComponent<float, 0.0f>
+class MeshBuilderAttributeFloat : public MeshBuilderAttribute<float>
 {
+public:
+	MeshBuilderAttributeFloat()
+	{
+		value = 0.0f;
+	}
 };
-class MeshBuilderComponentUInt32 : public MeshBuilderComponent<unsigned long, 1000>
+class MeshBuilderAttributeUInt32 : public MeshBuilderAttribute<unsigned long>
 {
+public:
+	MeshBuilderAttributeUInt32()
+	{
+		value = 0;
+	}
 };
-class MeshBuilderComponentInt32 : public MeshBuilderComponent<signed long, 1000>
+class MeshBuilderAttributeInt32 : public MeshBuilderAttribute<signed long>
 {
-
+public:
+	MeshBuilderAttributeInt32()
+	{
+		value = 0;
+	}
+};
+class MeshBuilderAttributeVector2 : public MeshBuilderAttribute<Vector2>
+{
+public:
+	MeshBuilderAttributeVector2()
+	{
+		value = Vector2(0.0f, 0.0f);
+	}
 };
 
 /// <summary>

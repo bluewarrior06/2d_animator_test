@@ -64,16 +64,12 @@ int main()
 	std::vector<ProgramUniformInfo> uniforms = RenderingServerUtility::get_active_uniforms(program);
 	
 	std::vector<unsigned char> buffer = {};
-	MeshBuilderComponentUInt32 int_component = MeshBuilderComponentUInt32();
-	int_component.push_to_buffer(buffer);
+	MeshBuilderAttributeVector2 vertex_component = MeshBuilderAttributeVector2();
+	vertex_component.value = Vector2(10.0f, 4238493.0f);
 
-	unsigned int value = 0;
-	((unsigned char*)&value)[0] = buffer[0];
-	((unsigned char*)&value)[1] = buffer[1];
-	((unsigned char*)&value)[2] = buffer[2];
-	((unsigned char*)&value)[3] = buffer[3];
+	vertex_component.push_to_buffer(buffer);
 
-	int_component.push_to_buffer(buffer);
+	vertex_component.push_to_buffer(buffer);
 
 	UpdatableObject& runtime_root = runtime.get_updatable_scene().get_root();
 

@@ -150,6 +150,7 @@
     <ClCompile Include="server.cpp" />
     <ClCompile Include="updatable_object.cpp" />
     <ClCompile Include="updatable_scene.cpp" />
+    <ClCompile Include="vector2.cpp" />
     <ClCompile Include="window.cpp" />
     <ClCompile Include="window_handler_updatable_object.cpp" />
   </ItemGroup>
@@ -167,6 +168,7 @@
     <ClInclude Include="server.h" />
     <ClInclude Include="updatable_object.h" />
     <ClInclude Include="updatable_scene.h" />
+    <ClInclude Include="vector2.h" />
     <ClInclude Include="window.h" />
     <ClInclude Include="window_handler_updatable_object.h" />
   </ItemGroup>

@@ -48,6 +48,9 @@
     <ClCompile Include="mesh_builder_vertex.cpp">
       <Filter>type\mesh</Filter>
     </ClCompile>
+    <ClCompile Include="vector2.cpp">
+      <Filter>type\math\vector</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="runtime">
@@ -88,6 +91,9 @@
     </Filter>
     <Filter Include="type\mesh">
       <UniqueIdentifier>{2ab09941-7519-4e88-83ce-76ee3d891c79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="type\math\vector">
+      <UniqueIdentifier>{32c472ed-652b-4f4b-845c-b756bad0608e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +141,9 @@
     </ClInclude>
     <ClInclude Include="mesh_builder_vertex.h">
       <Filter>type\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="vector2.h">
+      <Filter>type\math\vector</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
