@@ -64,12 +64,8 @@ int main()
 	std::vector<ProgramUniformInfo> uniforms = RenderingServerUtility::get_active_uniforms(program);
 	
 	std::vector<unsigned char> buffer = {};
-	MeshBuilderAttributeVector2 vertex_component = MeshBuilderAttributeVector2();
-	vertex_component.value = Vector2(10.0f, 4238493.0f);
-
-	vertex_component.push_to_buffer(buffer);
-
-	vertex_component.push_to_buffer(buffer);
+	MeshBuilderAttribSetStandard2D object;
+	object.push_onto_buffer(buffer);
 
 	UpdatableObject& runtime_root = runtime.get_updatable_scene().get_root();
 

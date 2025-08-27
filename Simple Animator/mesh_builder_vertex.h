@@ -15,7 +15,7 @@ public:
 
 	T value;
 
-	virtual void push_to_buffer(std::vector<unsigned char>& buffer)
+	virtual void push_onto_buffer(std::vector<unsigned char>& buffer)
 	{
 		unsigned char* value_fragment = (unsigned char*)&value;
 		int value_bytes = sizeof(T);
@@ -51,6 +51,7 @@ public:
 		value = 0;
 	}
 };
+// Possible padding/alignment issues.
 class MeshBuilderAttributeVector2 : public MeshBuilderAttribute<Vector2>
 {
 public:
@@ -61,11 +62,20 @@ public:
 };
 
 /// <summary>
-/// A single vertex in a mesh builder.
+/// Base class for containing MeshBuilderAttributeVector2s.
 /// </summary>
-class MeshBuilderVertex
+class MeshBuilderAttribSet
 {
-
+public:
+	virtual void push_onto_buffer(std::vector<unsigned char>& buffer);
 };
 
+class MeshBuilderAttribSetStandard2D : public MeshBuilderAttribSet
+{
+public:
+	MeshBuilderAttributeVector2 vertex_position;
+	MeshBuilderAttributeVector2 uv;
+
+	void push_onto_buffer(std::vector<unsigned char>& buffer) override;
+};
 #endif
