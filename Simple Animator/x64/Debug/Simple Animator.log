@@ -1,10 +1,4 @@
-﻿  main.cpp
-  rendering_server_utility.cpp
-C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\rendering_server_utility.cpp(14,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  rendering_server.cpp
-  runtime.cpp
-  window_handler_updatable_object.cpp
-  Generating Code...
+﻿  rendering_server.cpp
   Simple Animator.vcxproj -> C:\Users\Joey Merryfield\source\repos\Simple Animator\x64\Debug\Simple Animator.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

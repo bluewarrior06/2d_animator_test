@@ -62,3 +62,16 @@ void RenderingServerUtility::use_program(GLuint program)
 {
 	glUseProgram(program);
 }
+std::vector<ProgramUniformInfo> RenderingServerUtility::get_active_uniforms(GLuint program)
+{
+	std::vector<ProgramUniformInfo> uniforms = {};
+
+	int active_uniforms = 0;
+	glGetProgramiv(program, GL_ACTIVE_UNIFORMS, &active_uniforms);
+	for (int uniform_idx = 0; uniform_idx < active_uniforms; uniform_idx++)
+	{
+		uniforms.push_back(ProgramUniformInfo(program, uniform_idx));
+	}
+
+	return uniforms;
+}

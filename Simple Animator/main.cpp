@@ -38,11 +38,12 @@ int main()
 	RenderingServerUtility::set_shader_source(fragment_shader,
 		"#version 430\n"
 		"\n"
+		"uniform vec4 input2;\n"
 		"out vec4 fragment_color;\n"
 		"\n"
 		"void main()\n"
 		"{\n"
-		"	fragment_color = vec4(1.0f);\n"
+		"	fragment_color = input2 * vec4(1.0f);\n"
 		"}\n"
 	);
 
@@ -59,6 +60,7 @@ int main()
 	RenderingServerUtility::attach_shader(program, fragment_shader);
 	RenderingServerUtility::link_program(program);
 	RenderingServerUtility::use_program(program);
+	std::vector<ProgramUniformInfo> uniforms = RenderingServerUtility::get_active_uniforms(program);
 
 	UpdatableObject& runtime_root = runtime.get_updatable_scene().get_root();
 
