@@ -15,6 +15,14 @@ struct RenderingServerUtility
 	void static set_shader_source(GLuint shader, std::string source);
 	void static compile_shader(GLuint shader);
 	std::string static get_shader_info_log(GLuint shader);
+
+	GLuint static create_program();
+	void static destroy_program(GLuint program);
+	void static attach_shader(GLuint program, GLuint shader);
+	void static detach_shader(GLuint program, GLuint shader);
+	void static link_program(GLuint program);
+	void static validate_program(GLuint program);
+	void static use_program(GLuint program);
 };
 
 #endif

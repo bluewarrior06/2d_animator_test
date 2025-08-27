@@ -10,10 +10,6 @@ RenderingServer::RenderingServer(Runtime* runtime) : Server(runtime)
 
 	SDL_Window* window = runtime->get_window().get_sdl_window();
 	_gl_context = SDL_GL_CreateContext(window);
-	int load_result = gladLoadGL();
-
-	printf("%d\n", load_result);
-	printf("\n");
 }
 RenderingServer::~RenderingServer()
 {

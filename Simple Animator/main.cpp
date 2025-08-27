@@ -33,7 +33,7 @@ int main()
 		"\n"
 		"void main()\n"
 		"{\n"
-		"	gl_Position = vec4(VERTEX_POSITION);\n"
+		"	gl_Position = vec4(VERTEX_POSITION, 1.0f);\n"
 		"}\n");
 	RenderingServerUtility::set_shader_source(fragment_shader,
 		"#version 430\n"
@@ -53,6 +53,12 @@ int main()
 	std::string fragment_compile_result = std::string("fragment result: ") + RenderingServerUtility::get_shader_info_log(fragment_shader);
 	printf("%s\n", vertex_compile_result.c_str());
 	printf("%s\n", fragment_compile_result.c_str());
+
+	GLuint program = RenderingServerUtility::create_program();
+	RenderingServerUtility::attach_shader(program, vertex_shader);
+	RenderingServerUtility::attach_shader(program, fragment_shader);
+	RenderingServerUtility::link_program(program);
+	RenderingServerUtility::use_program(program);
 
 	UpdatableObject& runtime_root = runtime.get_updatable_scene().get_root();
 

@@ -33,3 +33,32 @@ std::string RenderingServerUtility::get_shader_info_log(GLuint shader)
 	glGetShaderInfoLog(shader, shader_info_log_length, &shader_info_log_length, (GLchar*)info_log.c_str());
 	return info_log;
 }
+
+GLuint RenderingServerUtility::create_program()
+{
+	return glCreateProgram();
+}
+void RenderingServerUtility::destroy_program(GLuint program)
+{
+	glDeleteProgram(program);
+}
+void RenderingServerUtility::attach_shader(GLuint program, GLuint shader)
+{
+	glAttachShader(program, shader);
+}
+void RenderingServerUtility::detach_shader(GLuint program, GLuint shader)
+{
+	glDetachShader(program, shader);
+}
+void RenderingServerUtility::link_program(GLuint program)
+{
+	glLinkProgram(program);
+}
+void RenderingServerUtility::validate_program(GLuint program)
+{
+	glValidateProgram(program);
+}
+void RenderingServerUtility::use_program(GLuint program)
+{
+	glUseProgram(program);
+}
