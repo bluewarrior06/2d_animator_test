@@ -10,7 +10,6 @@
 
 /// <summary>
 /// A single uniform found using RenderingServerUtility::get_active_uniforms(...).
-/// Shouldn't be moved or copied.
 /// 
 /// Gets the information of an active uniform, inside a program, at a specified index.
 /// 
@@ -48,6 +47,7 @@ struct RenderingServerUtility
 	static void attach_shader(GLuint program, GLuint shader);
 	static void detach_shader(GLuint program, GLuint shader);
 	static void link_program(GLuint program);
+	static std::string get_program_info_log(GLuint program);
 	static void validate_program(GLuint program);
 	static void use_program(GLuint program);
 	static std::vector<ProgramUniformInfo> get_active_uniforms(GLuint program);

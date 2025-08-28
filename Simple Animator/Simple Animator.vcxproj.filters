@@ -78,6 +78,12 @@
     <ClCompile Include="uniform_set.cpp">
       <Filter>type\render\uniform_set</Filter>
     </ClCompile>
+    <ClCompile Include="uniform.cpp">
+      <Filter>type\render\uniform</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix_2x3.cpp">
+      <Filter>type\math\matrix</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="runtime">
@@ -145,6 +151,9 @@
     </Filter>
     <Filter Include="type\render\uniform_set">
       <UniqueIdentifier>{5437b6ad-9529-4bd3-b5ef-4b5d1aaa258b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="type\render\uniform">
+      <UniqueIdentifier>{afc02ff2-fe16-4ad1-aeff-52d6064df6c0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -222,6 +231,12 @@
     </ClInclude>
     <ClInclude Include="uniform_set.h">
       <Filter>type\render\uniform_set</Filter>
+    </ClInclude>
+    <ClInclude Include="uniform.h">
+      <Filter>type\render\uniform</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix_2x3.h">
+      <Filter>type\math\matrix</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

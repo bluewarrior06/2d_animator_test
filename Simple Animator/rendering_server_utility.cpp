@@ -1,5 +1,19 @@
 #include "rendering_server_utility.h"
 
+ProgramUniformInfo::ProgramUniformInfo(GLuint program, GLint index)
+{
+	(const_cast<GLuint&>(this->program)) = program;
+	(const_cast<GLint&>(this->index)) = index;
+
+	//100% a better way than allocating half a kb of memory...
+	(const_cast<std::string&>(name)).resize(UNIFORM_MAX_BUFFER_SIZE, '\0');
+	
+	glGetActiveUniform(program, index, UNIFORM_MAX_BUFFER_SIZE, const_cast<GLsizei*>(&length), const_cast<GLint*>(&size), const_cast<GLenum*>(&type), (GLchar*)name.data());
+	
+	(const_cast<std::string&>(name)).resize(length, '\0');
+	glGetActiveUniformName(program, index, length + 1, const_cast<GLsizei*>(&length), (GLchar*)name.c_str());
+}
+
 void RenderingServerUtility::update_viewport(int x, int y, int width, int height)
 {
 	glViewport(x, y, width, height);
@@ -65,6 +79,20 @@ void RenderingServerUtility::detach_shader(GLuint program, GLuint shader)
 void RenderingServerUtility::link_program(GLuint program)
 {
 	glLinkProgram(program);
+}
+std::string RenderingServerUtility::get_program_info_log(GLuint program)
+{
+	std::string info_log = "";
+	int info_log_length = 0;
+	
+	glGetProgramiv(program, GL_INFO_LOG_LENGTH, &info_log_length);
+	if (info_log_length == 0)
+	{
+		return info_log;
+	}
+
+	info_log.resize(info_log_length + 1, '\0');
+	glGetProgramInfoLog(program, info_log_length, &info_log_length, (GLchar*) info_log.data());
 }
 void RenderingServerUtility::validate_program(GLuint program)
 {

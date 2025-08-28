@@ -1,19 +1,27 @@
 #ifndef _UNIFORM_SET_H_
-#define _UNIFORM_SET_H_
+#define _UNIFORM_SET_H
+
+#include "rendering_server_utility.h"
+#include "vector_2.h"
+#include "matrix_4.h"
+
+#include "uniform.h"
+
 
 /// <summary>
-/// Informs OpenGL on what uniforms to update.
+/// Holds multiple Uniform values to update OpenGL uniforms.
 /// </summary>
 /// <typeparam name="TMaterial"></typeparam>
 class UniformSet
 {
 public:
 	UniformSet();
-	UniformSet(UniformSet&& move) noexcept;
 
 	virtual ~UniformSet();
 
-	virtual void update_uniforms();
+	/// <summary>	/// </summary>
+	/// <param name="uniforms"></param>
+	virtual void update_uniforms(const std::vector<ProgramUniformInfo>& uniform_info);
 
 	void operator=(UniformSet&& move) noexcept;
 };
@@ -22,10 +30,11 @@ class UniformSetStandard2D : public UniformSet
 {
 public:
 	UniformSetStandard2D();
-	UniformSetStandard2D(UniformSetStandard2D&& move) noexcept;
 	~UniformSetStandard2D();
 
-	void operator=(UniformSetStandard2D&& move) noexcept;
+	UniformMatrix4 model_transform = UniformMatrix4("model");
+
+	void update_uniforms(const std::vector<ProgramUniformInfo>& uniform_info);
 };
 
 #endif

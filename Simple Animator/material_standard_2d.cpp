@@ -28,6 +28,8 @@ MaterialStandard2D::MaterialStandard2D(std::string vertex_source, std::string fr
 	RenderingServerUtility::attach_shader(_program, _fragment_shader);
 	RenderingServerUtility::link_program(_program);
 
+	_update_program_info_log();
+
 	_find_uniforms_in_program();
 }
 

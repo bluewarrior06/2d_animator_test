@@ -69,7 +69,7 @@ public:
 		for (Draw* draw : draws)
 		{
 			draw->mesh_buffer.bind();
-			draw->uniform_set.update_uniforms();
+			draw->uniform_set.update_uniforms(_material->get_uniforms());
 			draw->draw_set.draw();
 		}
 	}

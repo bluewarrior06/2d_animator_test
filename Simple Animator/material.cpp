@@ -13,6 +13,10 @@ void Material::_find_uniforms_in_program()
 {
 	_uniforms = RenderingServerUtility::get_active_uniforms(_program);
 }
+void Material::_update_program_info_log()
+{
+	_program_info_log = RenderingServerUtility::get_program_info_log(_program);
+}
 
 void Material::use_program()
 {
@@ -36,4 +40,8 @@ bool Material::usable()
 void Material::set_global_uniforms()
 {
 
+}
+std::string Material::get_program_info_log()
+{
+	return _program_info_log;
 }

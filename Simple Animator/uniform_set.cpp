@@ -4,21 +4,13 @@ UniformSet::UniformSet()
 {
 
 }
-UniformSet::UniformSet(UniformSet&& move) noexcept
-{
 
-}
 UniformSet::~UniformSet()
 {
 
 }
 
-void UniformSet::update_uniforms()
-{
-
-}
-
-void UniformSet::operator=(UniformSet&& move) noexcept
+void UniformSet::update_uniforms(const std::vector<ProgramUniformInfo>& uniform_info)
 {
 
 }
@@ -27,16 +19,16 @@ UniformSetStandard2D::UniformSetStandard2D()
 {
 
 }
-UniformSetStandard2D::UniformSetStandard2D(UniformSetStandard2D&& move) noexcept
-{
 
-}
 UniformSetStandard2D::~UniformSetStandard2D()
 {
 
 }
 
-void UniformSetStandard2D::operator=(UniformSetStandard2D&& move) noexcept
+void UniformSetStandard2D::update_uniforms(const std::vector<ProgramUniformInfo>& uniform_info)
 {
-
+	for (const ProgramUniformInfo& individual_uniform_info : uniform_info)
+	{
+		model_transform.attempt_supply_uniform(individual_uniform_info);
+	}
 }

@@ -15,6 +15,8 @@ public:
 	Material();
 	virtual ~Material();
 
+private:
+	std::string _program_info_log = "";
 protected:
 	GLuint _program = 0;
 	std::vector<ProgramUniformInfo> _uniforms;
@@ -24,6 +26,11 @@ protected:
 	/// Derived classes have to call this function after successfully setting up.
 	/// </summary>
 	void _find_uniforms_in_program();
+	/// <summary>
+	/// Updates the stored _program_info_log with the programs current info log.
+	/// Derived classes have to call this method when setting up.
+	/// </summary>
+	void _update_program_info_log();
 
 public:
 	void use_program();
@@ -32,6 +39,7 @@ public:
 
 	virtual bool usable();
 	virtual void set_global_uniforms();
+	std::string get_program_info_log();
 };
 
 #endif
