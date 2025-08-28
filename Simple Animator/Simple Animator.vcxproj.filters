@@ -69,11 +69,11 @@
     <ClCompile Include="material_batch.cpp">
       <Filter>type\render\material_batch</Filter>
     </ClCompile>
-    <ClCompile Include="material_batch_standard_2d.cpp">
-      <Filter>type\render\material_batch</Filter>
-    </ClCompile>
     <ClCompile Include="mesh_buffer.cpp">
       <Filter>type\render\mesh_buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="draw_set.cpp">
+      <Filter>type\render\draw_set</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +136,9 @@
     </Filter>
     <Filter Include="type\render\mesh_buffer">
       <UniqueIdentifier>{c9696574-908e-4b34-84b3-dca1769dc9ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="type\render\draw_set">
+      <UniqueIdentifier>{a5418fd9-570d-4f64-94fb-f1f7383fc4f2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -205,11 +208,11 @@
     <ClInclude Include="material_batch.h">
       <Filter>type\render\material_batch</Filter>
     </ClInclude>
-    <ClInclude Include="material_batch_standard_2d.h">
-      <Filter>type\render\material_batch</Filter>
-    </ClInclude>
     <ClInclude Include="mesh_buffer.h">
       <Filter>type\render\mesh_buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="draw_set.h">
+      <Filter>type\render\draw_set</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

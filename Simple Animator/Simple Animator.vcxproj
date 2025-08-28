@@ -138,10 +138,10 @@
     <ClCompile Include="..\..\..\..\..\..\libraries\glad 4.6\src\glad.c" />
     <ClCompile Include="color.cpp" />
     <ClCompile Include="debug_updatable_object.cpp" />
+    <ClCompile Include="draw_set.cpp" />
     <ClCompile Include="input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="material.cpp" />
-    <ClCompile Include="material_batch_standard_2d.cpp" />
     <ClCompile Include="material_batch.cpp" />
     <ClCompile Include="mesh_buffer.cpp" />
     <ClCompile Include="material_standard_2d.cpp" />
@@ -165,12 +165,12 @@
   <ItemGroup>
     <ClInclude Include="color.h" />
     <ClInclude Include="debug_updatable_object.h" />
+    <ClInclude Include="draw_set.h" />
     <ClInclude Include="event.h" />
     <ClInclude Include="event_handler.h" />
     <ClInclude Include="input.h" />
     <ClInclude Include="material.h" />
     <ClInclude Include="material_batch.h" />
-    <ClInclude Include="material_batch_standard_2d.h" />
     <ClInclude Include="mesh_buffer.h" />
     <ClInclude Include="material_standard_2d.h" />
     <ClInclude Include="matrix_4.h" />

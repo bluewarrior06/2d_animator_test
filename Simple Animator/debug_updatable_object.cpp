@@ -5,6 +5,7 @@
 #include "runtime.h"
 #include "material_standard_2d.h"
 #include "mesh_buffer.h"
+#include "draw_set.h"
 
 void DebugUpdatableObject::initialize()
 {
@@ -59,5 +60,19 @@ void DebugUpdatableObject::enter_scene()
 
 	buffer.supply(standard);
 	buffer.bind();
-	
+
+	DrawSetStandard2D draw_set = DrawSetStandard2D();
+	draw_set.set_vertices_to_draw(3);
+
+	SDL_Event event;
+	while (true)
+	{
+		while (SDL_PollEvent(&event))
+		{
+		}
+
+		draw_set.draw();
+
+		SDL_GL_SwapWindow(get_runtime()->get_window().get_sdl_window());
+	}
 }

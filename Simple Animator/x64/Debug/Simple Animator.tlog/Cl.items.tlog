@@ -1,10 +1,10 @@
 C:\libraries\glad 4.6\src\glad.c;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\glad.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\color.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\color.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\debug_updatable_object.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\debug_updatable_object.obj
+C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\draw_set.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\draw_set.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\input.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\input.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\main.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\main.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\material.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\material.obj
-C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\material_batch_standard_2d.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\material_batch_standard_2d.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\material_batch.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\material_batch.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\mesh_buffer.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\mesh_buffer.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\material_standard_2d.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\material_standard_2d.obj

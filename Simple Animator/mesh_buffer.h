@@ -10,7 +10,7 @@
 /// 
 /// ALL derived classes have to set up their vertex array to properly map to their associated vertex buffer.
 /// </summary>
-template <class TMeshBuilder >
+template <class TMeshBuilder>
 class MeshBuffer
 {
 public:
@@ -80,7 +80,7 @@ public:
 	{
 		if (usable() == false)
 		{
-
+			return;
 		}
 
 		RenderingServerUtility::bind_vertex_array(_vao);
