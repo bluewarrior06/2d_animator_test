@@ -42,7 +42,7 @@ bool RenderingServerUtility::shader_is_compiled(GLuint shader)
 {
 	GLint compilation_result = GL_FALSE;
 	glGetShaderiv(shader, GL_COMPILE_STATUS, &compilation_result);
-
+	
 	return compilation_result == GL_TRUE;
 }
 

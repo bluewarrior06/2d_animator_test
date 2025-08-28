@@ -43,22 +43,28 @@
       <Filter>runtime\server\rendering</Filter>
     </ClCompile>
     <ClCompile Include="mesh_builder.cpp">
-      <Filter>type\mesh_builder</Filter>
+      <Filter>type\render\mesh_builder</Filter>
     </ClCompile>
     <ClCompile Include="mesh_builder_attrib_set.cpp">
-      <Filter>type\mesh_builder</Filter>
+      <Filter>type\render\mesh_builder</Filter>
     </ClCompile>
     <ClCompile Include="vector_2.cpp">
       <Filter>type\math\vector</Filter>
     </ClCompile>
     <ClCompile Include="mesh_builder_attribute.cpp">
-      <Filter>type\mesh_builder</Filter>
+      <Filter>type\render\mesh_builder</Filter>
     </ClCompile>
     <ClCompile Include="debug_updatable_object.cpp">
       <Filter>runtime\updatable_object\playground</Filter>
     </ClCompile>
     <ClCompile Include="matrix_4.cpp">
       <Filter>type\math\matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="material.cpp">
+      <Filter>type\render\material</Filter>
+    </ClCompile>
+    <ClCompile Include="material_standard_2d.cpp">
+      <Filter>type\render\material</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -101,14 +107,20 @@
     <Filter Include="type\math\vector">
       <UniqueIdentifier>{32c472ed-652b-4f4b-845c-b756bad0608e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="type\mesh_builder">
-      <UniqueIdentifier>{2ab09941-7519-4e88-83ce-76ee3d891c79}</UniqueIdentifier>
-    </Filter>
     <Filter Include="runtime\updatable_object\playground">
       <UniqueIdentifier>{5d94b901-e60e-43ec-afc5-18c6837d29be}</UniqueIdentifier>
     </Filter>
     <Filter Include="type\math\matrix">
       <UniqueIdentifier>{d723a1f4-ecad-49f3-aaf5-9ffcf83322f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="type\render">
+      <UniqueIdentifier>{98791f7b-53b0-4537-a1e6-8bbcf18c7659}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="type\render\mesh_builder">
+      <UniqueIdentifier>{2ab09941-7519-4e88-83ce-76ee3d891c79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="type\render\material">
+      <UniqueIdentifier>{06aff718-45e8-453c-81d9-72fd475e2903}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -152,22 +164,28 @@
       <Filter>runtime\server\rendering</Filter>
     </ClInclude>
     <ClInclude Include="mesh_builder.h">
-      <Filter>type\mesh_builder</Filter>
+      <Filter>type\render\mesh_builder</Filter>
     </ClInclude>
     <ClInclude Include="mesh_builder_attrib_set.h">
-      <Filter>type\mesh_builder</Filter>
+      <Filter>type\render\mesh_builder</Filter>
     </ClInclude>
     <ClInclude Include="vector_2.h">
       <Filter>type\math\vector</Filter>
     </ClInclude>
     <ClInclude Include="mesh_builder_attribute.h">
-      <Filter>type\mesh_builder</Filter>
+      <Filter>type\render\mesh_builder</Filter>
     </ClInclude>
     <ClInclude Include="debug_updatable_object.h">
       <Filter>runtime\updatable_object\playground</Filter>
     </ClInclude>
     <ClInclude Include="matrix_4.h">
       <Filter>type\math\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="material.h">
+      <Filter>type\render\material</Filter>
+    </ClInclude>
+    <ClInclude Include="material_standard_2d.h">
+      <Filter>type\render\material</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

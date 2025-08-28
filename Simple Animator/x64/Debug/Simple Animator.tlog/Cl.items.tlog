@@ -3,6 +3,9 @@ C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\color.cpp;
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\debug_updatable_object.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\debug_updatable_object.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\input.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\input.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\main.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\main.obj
+C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\material.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\material.obj
+C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\material_standard_2d.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\material_standard_2d.obj
+C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\matrix_4.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\matrix_4.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\mesh_builder.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\mesh_builder.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\mesh_builder_attribute.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\mesh_builder_attribute.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\mesh_builder_attrib_set.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\mesh_builder_attrib_set.obj
@@ -15,6 +18,6 @@ C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\sdl_event_
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\server.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\server.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\updatable_object.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\updatable_object.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\updatable_scene.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\updatable_scene.obj
-C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\vector2.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\vector2.obj
+C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\vector_2.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\vector_2.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\window.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\window.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\window_handler_updatable_object.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\window_handler_updatable_object.obj

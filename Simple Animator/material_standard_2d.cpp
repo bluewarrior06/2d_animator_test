@@ -6,24 +6,33 @@ MaterialStandard2D::MaterialStandard2D(std::string vertex_source, std::string fr
 {
 	_vertex_shader = RenderingServerUtility::create_shader(GL_VERTEX_SHADER);
 	_fragment_shader = RenderingServerUtility::create_shader(GL_FRAGMENT_SHADER);
+	RenderingServerUtility::set_shader_source(_vertex_shader, vertex_source);
+	RenderingServerUtility::set_shader_source(_fragment_shader, fragment_source);
 	RenderingServerUtility::compile_shader(_vertex_shader);
 	RenderingServerUtility::compile_shader(_fragment_shader);
+	_vertex_shader_info_log = RenderingServerUtility::get_shader_info_log(_vertex_shader);
+	_fragment_shader_info_log = RenderingServerUtility::get_shader_info_log(_fragment_shader);
 
 	if (
 		RenderingServerUtility::shader_is_compiled(_vertex_shader) == false
 		or
 		RenderingServerUtility::shader_is_compiled(_fragment_shader) == false)
 	{
-		glDeleteShader(_vertex_shader);
-		glDeleteShader(_fragment_shader);
+		
+		_vertex_shader = 0;
+		_fragment_shader = 0;
 		return;
 	}
 
-	glAttachShader(_program, _vertex_shader);
-	glAttachShader(_program, _fragment_shader);
-	glLinkProgram(_program);
-	_find_uniforms_in_program();
+	RenderingServerUtility::attach_shader(_program, _vertex_shader);
+	RenderingServerUtility::attach_shader(_program, _fragment_shader);
+	RenderingServerUtility::link_program(_program);
 
+	_find_uniforms_in_program();
+}
+
+MaterialStandard2D::~MaterialStandard2D()
+{
 	glDeleteShader(_vertex_shader);
 	glDeleteShader(_fragment_shader);
 }
@@ -35,4 +44,13 @@ bool MaterialStandard2D::usable()
 void MaterialStandard2D::set_global_uniforms()
 {
 
+}
+
+std::string MaterialStandard2D::get_vertex_shader_info_log()
+{
+	return _vertex_shader_info_log;
+}
+std::string MaterialStandard2D::get_fragment_shader_info_log()
+{
+	return _fragment_shader_info_log;
 }

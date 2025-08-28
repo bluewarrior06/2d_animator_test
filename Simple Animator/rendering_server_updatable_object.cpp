@@ -4,3 +4,7 @@ void RenderingServerUpdatableObject::update()
 {
 
 }
+void RenderingServerUpdatableObject::draw()
+{
+
+}

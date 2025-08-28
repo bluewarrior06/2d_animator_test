@@ -140,6 +140,8 @@
     <ClCompile Include="debug_updatable_object.cpp" />
     <ClCompile Include="input.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="material.cpp" />
+    <ClCompile Include="material_standard_2d.cpp" />
     <ClCompile Include="matrix_4.cpp" />
     <ClCompile Include="mesh_builder.cpp" />
     <ClCompile Include="mesh_builder_attribute.cpp" />
@@ -163,6 +165,8 @@
     <ClInclude Include="event.h" />
     <ClInclude Include="event_handler.h" />
     <ClInclude Include="input.h" />
+    <ClInclude Include="material.h" />
+    <ClInclude Include="material_standard_2d.h" />
     <ClInclude Include="matrix_4.h" />
     <ClInclude Include="mesh_builder.h" />
     <ClInclude Include="mesh_builder_attribute.h" />

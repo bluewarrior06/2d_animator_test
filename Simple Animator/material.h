@@ -13,7 +13,7 @@ class Material
 {
 public:
 	Material();
-	~Material();
+	virtual ~Material();
 
 protected:
 	GLuint _program = 0;
@@ -26,9 +26,6 @@ protected:
 	void _find_uniforms_in_program();
 
 public:
-
-
-
 	void use_program();
 
 	const std::vector<ProgramUniformInfo>& get_uniforms();
