@@ -2,11 +2,11 @@
 
 Material::Material()
 {
-	_program = glCreateProgram();
+	_program = RenderingServerUtility::create_program();
 }
 Material::~Material()
 {
-	glDeleteProgram(_program);
+	RenderingServerUtility::destroy_program(_program);
 }
 
 void Material::_find_uniforms_in_program()

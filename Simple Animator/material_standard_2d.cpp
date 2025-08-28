@@ -33,8 +33,9 @@ MaterialStandard2D::MaterialStandard2D(std::string vertex_source, std::string fr
 
 MaterialStandard2D::~MaterialStandard2D()
 {
-	glDeleteShader(_vertex_shader);
-	glDeleteShader(_fragment_shader);
+	RenderingServerUtility::destroy_shader(_vertex_shader);
+	RenderingServerUtility::destroy_shader(_fragment_shader);
+	RenderingServerUtility::destroy_program(_program);
 }
 
 bool MaterialStandard2D::usable()

@@ -26,7 +26,6 @@ public:
 
 	std::string get_vertex_shader_info_log();
 	std::string get_fragment_shader_info_log();
-
 };
 
 #endif
