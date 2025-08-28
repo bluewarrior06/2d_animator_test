@@ -27,8 +27,8 @@
 /// The mesh is a vao with a vbo bound.
 /// A uniform set is uniforms that are set inside of a uniform.
 /// A draw call is simply an OpenGL draw call.
-/// 
 /// </summary>
+/// 
 class RenderingServer : public Server
 {
 

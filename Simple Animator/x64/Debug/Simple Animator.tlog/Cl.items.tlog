@@ -4,6 +4,9 @@ C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\debug_upda
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\input.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\input.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\main.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\main.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\material.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\material.obj
+C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\material_batch_standard_2d.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\material_batch_standard_2d.obj
+C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\material_batch.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\material_batch.obj
+C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\mesh_buffer.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\mesh_buffer.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\material_standard_2d.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\material_standard_2d.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\matrix_4.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\matrix_4.obj
 C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\mesh_builder.cpp;C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\x64\Debug\mesh_builder.obj

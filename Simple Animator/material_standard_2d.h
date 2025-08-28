@@ -13,13 +13,13 @@ public:
 	MaterialStandard2D(std::string vertex_source, std::string fragment_source);
 	~MaterialStandard2D();
 
-private:
-	GLuint _vertex_shader = 0;
-	GLuint _fragment_shader = 0;
-
 	std::string _vertex_shader_info_log = "";
 	std::string _fragment_shader_info_log = "";
 
+private:
+	GLuint _vertex_shader = 0;
+	GLuint _fragment_shader = 0;
+	
 public:
 	bool usable() override;
 	void set_global_uniforms() override;

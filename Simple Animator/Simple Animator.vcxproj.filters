@@ -66,6 +66,15 @@
     <ClCompile Include="material_standard_2d.cpp">
       <Filter>type\render\material</Filter>
     </ClCompile>
+    <ClCompile Include="material_batch.cpp">
+      <Filter>type\render\material_batch</Filter>
+    </ClCompile>
+    <ClCompile Include="material_batch_standard_2d.cpp">
+      <Filter>type\render\material_batch</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh_buffer.cpp">
+      <Filter>type\render\mesh_buffer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="runtime">
@@ -121,6 +130,12 @@
     </Filter>
     <Filter Include="type\render\material">
       <UniqueIdentifier>{06aff718-45e8-453c-81d9-72fd475e2903}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="type\render\material_batch">
+      <UniqueIdentifier>{0705ecaf-e11b-4ff0-9c79-eb5fd1e85eaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="type\render\mesh_buffer">
+      <UniqueIdentifier>{c9696574-908e-4b34-84b3-dca1769dc9ac}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -186,6 +201,15 @@
     </ClInclude>
     <ClInclude Include="material_standard_2d.h">
       <Filter>type\render\material</Filter>
+    </ClInclude>
+    <ClInclude Include="material_batch.h">
+      <Filter>type\render\material_batch</Filter>
+    </ClInclude>
+    <ClInclude Include="material_batch_standard_2d.h">
+      <Filter>type\render\material_batch</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh_buffer.h">
+      <Filter>type\render\mesh_buffer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -4,6 +4,7 @@
 #include "mesh_builder.h"
 #include "runtime.h"
 #include "material_standard_2d.h"
+#include "mesh_buffer.h"
 
 void DebugUpdatableObject::initialize()
 {
@@ -37,5 +38,26 @@ void DebugUpdatableObject::enter_scene()
 		"}\n"
 	);
 
+	material.usable();
 	material.use_program();
+
+	MeshBufferStandard2D buffer = MeshBufferStandard2D();
+	
+	MeshBuilderStandard2D standard = MeshBuilderStandard2D();
+	
+	MeshBuilderAttribSetStandard2D a = MeshBuilderAttribSetStandard2D();
+	MeshBuilderAttribSetStandard2D b = MeshBuilderAttribSetStandard2D();
+	MeshBuilderAttribSetStandard2D c = MeshBuilderAttribSetStandard2D();
+	
+	a.vertex_position.value = Vector2(-1.0f, -1.0f);
+	b.vertex_position.value = Vector2(0.0f, 1.0f);
+	c.vertex_position.value = Vector2(1.0f, -1.0f);
+
+	standard.vertices.push_back(a);
+	standard.vertices.push_back(b);
+	standard.vertices.push_back(c);
+
+	buffer.supply(standard);
+	buffer.bind();
+	
 }

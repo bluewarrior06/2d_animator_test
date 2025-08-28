@@ -1,15 +1,38 @@
 c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\vc143.pdb
 c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\vc143.idb
 c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\glad.obj
-c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\window.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\updatable_scene.obj
 c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\sdl_event_event_handler.obj
-c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\runtime.obj
 c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\main.obj
-c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\input_event.obj
-c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\event.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\runtime.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\updatable_object.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\window_handler_updatable_object.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\window.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\sdl_event_event.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\input.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\server.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\rendering_server.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\rendering_server_updatable_object.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\rendering_server_utility.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\color.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\mesh_builder.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\mesh_builder_attribute.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\mesh_builder_attrib_set.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\debug_updatable_object.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\vector_2.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\matrix_4.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\material_standard_2d.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\material.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\material_batch.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\material_batch_standard_2d.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\mesh_buffer.obj
 c:\users\joey merryfield\source\repos\simple animator\x64\debug\simple animator.exe
 c:\users\joey merryfield\source\repos\simple animator\x64\debug\simple animator.pdb
 c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\simple animator.ilk
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\event.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\input_event.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\mesh_builder_vertex.obj
+c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\vector2.obj
 c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\simple animator.tlog\cl.command.1.tlog
 c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\simple animator.tlog\cl.items.tlog
 c:\users\joey merryfield\source\repos\simple animator\simple animator\x64\debug\simple animator.tlog\cl.read.1.tlog
