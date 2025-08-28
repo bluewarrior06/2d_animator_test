@@ -5,7 +5,13 @@
 #include "mesh_builder.h"
 
 /// <summary>
-/// Informs OpenGL on the type of primitive to draw, and how many vertices to draw.
+/// Informs OpenGL information on how to draw something.
+/// 
+/// This includes:
+/// * mesh buffer
+/// * type of primitive to draw
+/// * number of vertices to draw
+/// 
 /// </summary>
 /// <typeparam name="TMeshBuilder"></typeparam>
 template <class TMeshBuilder>
@@ -16,22 +22,27 @@ public:
 	{
 
 	}
+	DrawSet(DrawSet&& move) noexcept
+	{
+		this->_primitive_type = move._primitive_type;
+		this->_number_of_vertices = move._number_of_vertices;
+	}
 	~DrawSet()
 	{
 
 	}
 
 protected:
-	GLenum primitive_type = GL_TRIANGLES;
-	int number_of_vertices = 0;
+	GLenum _primitive_type = GL_TRIANGLES;
+	int _number_of_vertices = 0;
 	
 public:
-	void set_draw_type(GLenum primitive_type)
+	void set_draw_type(GLenum new_primitive_type)
 	{
-		switch (primitive_type)
+		switch (new_primitive_type)
 		{
 		case GL_TRIANGLES:
-			primitive_type = GL_TRIANGLES;
+			_primitive_type = GL_TRIANGLES;
 			break;
 		default:
 			break;
@@ -40,12 +51,18 @@ public:
 
 	void set_vertices_to_draw(int vertex_count)
 	{
-		number_of_vertices = vertex_count;
+		_number_of_vertices = vertex_count;
 	}
 
 	virtual void draw()
 	{
 
+	}
+
+	void operator=(DrawSet&& move) noexcept
+	{
+		this->_primitive_type = move._primitive_type;
+		this->_number_of_vertices = move._number_of_vertices;
 	}
 };
 
@@ -54,7 +71,7 @@ class DrawSetStandard2D : public DrawSet<MeshBuilderStandard2D>
 public:
 	void draw() override
 	{
-		glDrawArrays(primitive_type, 0, number_of_vertices);
+		glDrawArrays(_primitive_type, 0, _number_of_vertices);
 	}
 };
 

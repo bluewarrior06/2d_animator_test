@@ -1,4 +1,6 @@
-﻿  debug_updatable_object.cpp
+﻿  material_batch.cpp
+  mesh_buffer.cpp
+  Generating Code...
   Simple Animator.vcxproj -> C:\Users\Joey Merryfield\source\repos\Simple Animator\x64\Debug\Simple Animator.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

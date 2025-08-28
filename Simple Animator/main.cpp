@@ -9,6 +9,8 @@
 
 int main()
 {
+	
+
 	GlobalRuntimeBuilder global_builder = GlobalRuntimeBuilder();
 	global_builder.opengl_enabled = true;
 	global_builder.opengl_context_major_version = 4;
@@ -24,9 +26,11 @@ int main()
 	builder.window_flags = SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL;
 
 	Runtime runtime = Runtime(builder);
-	
 	runtime.get_updatable_scene().get_root().add_child(new DebugUpdatableObject());
 	
+	
+
+
 	runtime.begin();
 
 	return 0;

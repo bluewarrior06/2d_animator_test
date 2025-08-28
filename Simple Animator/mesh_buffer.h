@@ -18,7 +18,12 @@ public:
 	{
 
 	}
-	~MeshBuffer()
+	//pray to god that these fuckass move semantics don't cause memory leaks~~ <3
+	MeshBuffer(MeshBuffer&& move) noexcept
+	{
+
+	}
+	virtual ~MeshBuffer()
 	{
 
 	}
@@ -40,6 +45,11 @@ public:
 	virtual void bind()
 	{
 	}
+
+	void operator=(MeshBuffer&& move) noexcept
+	{
+
+	}
 };
 
 class MeshBufferStandard2D : public MeshBuffer<MeshBuilderStandard2D>
@@ -51,10 +61,14 @@ public:
 		_vao = RenderingServerUtility::create_vertex_array();
 		RenderingServerUtility::associate_vbo_with_vao_as_standard_2d(_vao, _vbo);
 	}
+	MeshBufferStandard2D(MeshBufferStandard2D&& move) noexcept
+	{
+		this->_vbo = move._vbo;
+		this->_vao = move._vao;
+	}
 	~MeshBufferStandard2D()
 	{
-		RenderingServerUtility::destroy_buffer(_vbo);
-		RenderingServerUtility::destroy_vertex_array(_vao);
+		printf("%d, %d\n", _vbo, _vao);
 	}
 
 private:
@@ -84,6 +98,19 @@ public:
 		}
 
 		RenderingServerUtility::bind_vertex_array(_vao);
+	}
+
+	void operator=(MeshBufferStandard2D&& move) noexcept
+	{
+		RenderingServerUtility::destroy_buffer(this->_vbo);
+		RenderingServerUtility::destroy_vertex_array(this->_vao);
+
+
+		this->_vao = move._vao;
+		this->_vbo = move._vbo;
+
+		move._vao = 0;
+		move._vbo = 0;
 	}
 };
 

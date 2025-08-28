@@ -156,6 +156,7 @@
     <ClCompile Include="sdl_event_event.h" />
     <ClCompile Include="sdl_event_event_handler.h" />
     <ClCompile Include="server.cpp" />
+    <ClCompile Include="uniform_set.cpp" />
     <ClCompile Include="updatable_object.cpp" />
     <ClCompile Include="updatable_scene.cpp" />
     <ClCompile Include="vector_2.cpp" />
@@ -182,6 +183,7 @@
     <ClInclude Include="rendering_server.h" />
     <ClInclude Include="runtime.h" />
     <ClInclude Include="server.h" />
+    <ClInclude Include="uniform_set.h" />
     <ClInclude Include="updatable_object.h" />
     <ClInclude Include="updatable_scene.h" />
     <ClInclude Include="vector_2.h" />

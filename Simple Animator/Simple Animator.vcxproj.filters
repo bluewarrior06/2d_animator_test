@@ -75,6 +75,9 @@
     <ClCompile Include="draw_set.cpp">
       <Filter>type\render\draw_set</Filter>
     </ClCompile>
+    <ClCompile Include="uniform_set.cpp">
+      <Filter>type\render\uniform_set</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="runtime">
@@ -139,6 +142,9 @@
     </Filter>
     <Filter Include="type\render\draw_set">
       <UniqueIdentifier>{a5418fd9-570d-4f64-94fb-f1f7383fc4f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="type\render\uniform_set">
+      <UniqueIdentifier>{5437b6ad-9529-4bd3-b5ef-4b5d1aaa258b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -213,6 +219,9 @@
     </ClInclude>
     <ClInclude Include="draw_set.h">
       <Filter>type\render\draw_set</Filter>
+    </ClInclude>
+    <ClInclude Include="uniform_set.h">
+      <Filter>type\render\uniform_set</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
