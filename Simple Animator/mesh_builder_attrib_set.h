@@ -2,7 +2,7 @@
 #define _MESH_BUILDER_ATTRIB_SET_H_
 
 #include <vector>
-#include "vector2.h"
+#include "vector_2.h"
 
 #include "mesh_builder_attribute.h"
 

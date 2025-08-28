@@ -140,6 +140,7 @@
     <ClCompile Include="debug_updatable_object.cpp" />
     <ClCompile Include="input.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="matrix_4.cpp" />
     <ClCompile Include="mesh_builder.cpp" />
     <ClCompile Include="mesh_builder_attribute.cpp" />
     <ClCompile Include="mesh_builder_attrib_set.cpp" />
@@ -152,7 +153,7 @@
     <ClCompile Include="server.cpp" />
     <ClCompile Include="updatable_object.cpp" />
     <ClCompile Include="updatable_scene.cpp" />
-    <ClCompile Include="vector2.cpp" />
+    <ClCompile Include="vector_2.cpp" />
     <ClCompile Include="window.cpp" />
     <ClCompile Include="window_handler_updatable_object.cpp" />
   </ItemGroup>
@@ -162,6 +163,7 @@
     <ClInclude Include="event.h" />
     <ClInclude Include="event_handler.h" />
     <ClInclude Include="input.h" />
+    <ClInclude Include="matrix_4.h" />
     <ClInclude Include="mesh_builder.h" />
     <ClInclude Include="mesh_builder_attribute.h" />
     <ClInclude Include="mesh_builder_attrib_set.h" />
@@ -172,7 +174,7 @@
     <ClInclude Include="server.h" />
     <ClInclude Include="updatable_object.h" />
     <ClInclude Include="updatable_scene.h" />
-    <ClInclude Include="vector2.h" />
+    <ClInclude Include="vector_2.h" />
     <ClInclude Include="window.h" />
     <ClInclude Include="window_handler_updatable_object.h" />
   </ItemGroup>

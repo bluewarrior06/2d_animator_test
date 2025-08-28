@@ -1,5 +1,10 @@
 #include "rendering_server_utility.h"
 
+void RenderingServerUtility::update_viewport(int x, int y, int width, int height)
+{
+	glViewport(x, y, width, height);
+}
+
 GLuint RenderingServerUtility::create_shader(GLenum shader_type)
 {
 	return glCreateShader(shader_type);
@@ -76,6 +81,15 @@ std::vector<ProgramUniformInfo> RenderingServerUtility::get_active_uniforms(GLui
 	return uniforms;
 }
 
+void RenderingServerUtility::set_uniform(ProgramUniformInfo& uniform_info, float value)
+{
+	glUniform1f(uniform_info.index, value);
+}
+void RenderingServerUtility::set_uniform(ProgramUniformInfo& uniform_info, Vector2 value)
+{
+	glUniform2f(uniform_info.index, value.x, value.y);
+}
+
 GLuint RenderingServerUtility::create_buffer()
 {
 	GLuint buffer = 0;
@@ -96,6 +110,7 @@ void RenderingServerUtility::set_vertex_buffer(GLuint buffer, const std::vector<
 {
 	bool buffer_already_initialized = is_buffer_initialized(buffer);
 	if (buffer_already_initialized)
+	
 	{
 		glNamedBufferSubData(buffer, 0, data.size(), data.data());
 	}

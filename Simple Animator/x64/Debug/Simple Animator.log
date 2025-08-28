@@ -1,4 +1,14 @@
 ﻿  debug_updatable_object.cpp
-  Simple Animator.vcxproj -> C:\Users\Joey Merryfield\source\repos\Simple Animator\x64\Debug\Simple Animator.exe
-  'pwsh.exe' is not recognized as an internal or external command,
-  operable program or batch file.
+  main.cpp
+  mesh_builder_attribute.cpp
+  mesh_builder_attrib_set.cpp
+  rendering_server_utility.cpp
+C:\Users\Joey Merryfield\source\repos\Simple Animator\Simple Animator\rendering_server_utility.cpp(19,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  rendering_server_updatable_object.cpp
+  rendering_server.cpp
+  runtime.cpp
+  vector_2.cpp
+  window_handler_updatable_object.cpp
+  Generating Code...
+runtime.obj : error LNK2001: unresolved external symbol "private: virtual void __cdecl RenderingServerUpdatableObject::draw(void)" (?draw@RenderingServerUpdatableObject@@EEAAXXZ)
+C:\Users\Joey Merryfield\source\repos\Simple Animator\x64\Debug\Simple Animator.exe : fatal error LNK1120: 1 unresolved externals

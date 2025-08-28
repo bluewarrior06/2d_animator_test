@@ -48,7 +48,7 @@
     <ClCompile Include="mesh_builder_attrib_set.cpp">
       <Filter>type\mesh_builder</Filter>
     </ClCompile>
-    <ClCompile Include="vector2.cpp">
+    <ClCompile Include="vector_2.cpp">
       <Filter>type\math\vector</Filter>
     </ClCompile>
     <ClCompile Include="mesh_builder_attribute.cpp">
@@ -56,6 +56,9 @@
     </ClCompile>
     <ClCompile Include="debug_updatable_object.cpp">
       <Filter>runtime\updatable_object\playground</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix_4.cpp">
+      <Filter>type\math\matrix</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -104,6 +107,9 @@
     <Filter Include="runtime\updatable_object\playground">
       <UniqueIdentifier>{5d94b901-e60e-43ec-afc5-18c6837d29be}</UniqueIdentifier>
     </Filter>
+    <Filter Include="type\math\matrix">
+      <UniqueIdentifier>{d723a1f4-ecad-49f3-aaf5-9ffcf83322f5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="event.h">
@@ -151,7 +157,7 @@
     <ClInclude Include="mesh_builder_attrib_set.h">
       <Filter>type\mesh_builder</Filter>
     </ClInclude>
-    <ClInclude Include="vector2.h">
+    <ClInclude Include="vector_2.h">
       <Filter>type\math\vector</Filter>
     </ClInclude>
     <ClInclude Include="mesh_builder_attribute.h">
@@ -159,6 +165,9 @@
     </ClInclude>
     <ClInclude Include="debug_updatable_object.h">
       <Filter>runtime\updatable_object\playground</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix_4.h">
+      <Filter>type\math\matrix</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

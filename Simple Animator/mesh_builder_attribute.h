@@ -2,7 +2,7 @@
 #define _MESH_BUILDER_ATTRIBUTE_H_
 
 #include <vector>
-#include "vector2.h"
+#include "vector_2.h"
 
 /// <summary>
 /// Describes a signle attribute for a vertex.

@@ -8,7 +8,8 @@
 /// </summary>
 class RenderingServerUpdatableObject : public UpdatableObject
 {
-
+	void update() override;
+	void draw() override;
 };
 
 #endif

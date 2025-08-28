@@ -11,6 +11,9 @@
 /// <summary>
 /// A single uniform found using RenderingServerUtility::get_active_uniforms(...).
 /// Shouldn't be moved or copied.
+/// 
+/// Gets the information of an active uniform, inside a program, at a specified index.
+/// 
 /// </summary>
 struct ProgramUniformInfo
 {
@@ -21,7 +24,8 @@ struct ProgramUniformInfo
 	const GLsizei length = 0;
 	const GLint size = 0;
 	const GLenum type = 0;
-	std::string name = "";
+	const GLint index = 0;
+	const std::string name = "";
 };
 
 /// <summary>
@@ -29,6 +33,8 @@ struct ProgramUniformInfo
 /// </summary>
 struct RenderingServerUtility
 {
+
+	static void update_viewport(int x, int y, int width, int height);
 
 	static GLuint create_shader(GLenum shader_type);
 	static void destroy_shader(GLuint shader);
@@ -44,6 +50,21 @@ struct RenderingServerUtility
 	static void validate_program(GLuint program);
 	static void use_program(GLuint program);
 	static std::vector<ProgramUniformInfo> get_active_uniforms(GLuint program);
+
+	/// <summary>
+	/// Sets the uniform for the currently bound program.
+	/// The "program" property  in the uniform_info argument isn't checked against
+	/// the current program; The one calling this function is in charge in determining
+	/// if the current program is currently set.
+	/// 
+	/// This function simply calls glUniform* for the uniform location stored inside
+	/// of the uniform_info argument.
+	/// 
+	/// </summary>
+	/// <param name="uniform_info"></param>
+	/// <param name="value"></param>
+	static void set_uniform(ProgramUniformInfo& uniform_info, float value);
+	static void set_uniform(ProgramUniformInfo& uniform_info, Vector2 value);
 
 	static GLuint create_buffer();
 	static void destroy_buffer(GLuint buffer);

@@ -17,6 +17,7 @@ Runtime::Runtime(RuntimeBuilder builder)
 	_scene.get_root()._sync(this);
 
 	WindowHandlerUpdatableObject* window_handler = new WindowHandlerUpdatableObject();
+
 	RenderingServerUpdatableObject* rendering_server = new RenderingServerUpdatableObject();
 	
 	_scene.get_root().add_child(window_handler);
