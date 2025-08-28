@@ -9,6 +9,7 @@ UpdatableObject::UpdatableObject()
 }
 UpdatableObject::~UpdatableObject()
 {
+	_exit_scene_and_propagate();
 	destroy();
 	for (UpdatableObject* child : _children)
 	{
@@ -34,7 +35,11 @@ void UpdatableObject::_draw_and_propagate()
 }
 void UpdatableObject::_enter_scene_and_propagate()
 {
-	enter_scene();
+	if (_is_in_scene == false)
+	{
+		enter_scene();
+		_is_in_scene = true;
+	}
 	for (UpdatableObject* child : _children)
 	{
 		child->_enter_scene_and_propagate();
@@ -42,7 +47,11 @@ void UpdatableObject::_enter_scene_and_propagate()
 }
 void UpdatableObject::_exit_scene_and_propagate()
 {
-	exit_scene();
+	if (_is_in_scene)
+	{
+		exit_scene();
+		_is_in_scene = false;
+	}
 	for (UpdatableObject* child : _children)
 	{
 		child->_exit_scene_and_propagate();

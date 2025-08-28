@@ -28,6 +28,14 @@ private:
 
 	Runtime* _sync_runtime = nullptr;
 
+	/// <summary>
+	/// If the UpdatableObject is currently inside of the scene.
+	/// 
+	/// If true, the scene can't be informed it has been added to a scene during a propagation.
+	/// If false, the scene can't be informed that it has exited from a scene during a propagation.
+	/// </summary>
+	bool _is_in_scene = false;
+
 	void _update_and_propagate();
 	void _draw_and_propagate();
 	void _enter_scene_and_propagate();

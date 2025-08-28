@@ -68,7 +68,8 @@ public:
 	}
 	~MeshBufferStandard2D()
 	{
-		printf("%d, %d\n", _vbo, _vao);
+		RenderingServerUtility::destroy_buffer(_vbo);
+		RenderingServerUtility::destroy_vertex_array(_vao);
 	}
 
 private:

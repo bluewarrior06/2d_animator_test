@@ -1,4 +1,6 @@
-﻿  material_batch.cpp
+﻿  debug_updatable_object.cpp
+  main.cpp
+  material_batch.cpp
   mesh_buffer.cpp
   Generating Code...
   Simple Animator.vcxproj -> C:\Users\Joey Merryfield\source\repos\Simple Animator\x64\Debug\Simple Animator.exe
