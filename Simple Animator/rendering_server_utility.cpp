@@ -38,6 +38,13 @@ std::string RenderingServerUtility::get_shader_info_log(GLuint shader)
 	glGetShaderInfoLog(shader, shader_info_log_length, &shader_info_log_length, (GLchar*)info_log.c_str());
 	return info_log;
 }
+bool RenderingServerUtility::shader_is_compiled(GLuint shader)
+{
+	GLint compilation_result = GL_FALSE;
+	glGetShaderiv(shader, GL_COMPILE_STATUS, &compilation_result);
+
+	return compilation_result == GL_TRUE;
+}
 
 GLuint RenderingServerUtility::create_program()
 {

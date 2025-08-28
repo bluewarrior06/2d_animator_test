@@ -12,18 +12,21 @@
 /// 
 /// The rendering server heavily revolves around OpenGL's DSA, so the latest OpenGL version should be used.
 /// 
-/// ========================= 2D Rendering ========================= //
-/// The rendering system is allowed to do 2D rendering.
-/// There are a large number of features to help neatly draw things onto the screen.
-/// 
-/// One way to draw onto the screen is through Material groups.
-/// A material group combines a single material, and a number of draw calls for said material.
+/// ========================= Rendering ========================= //
+
+/// One way to draw onto the screen is through Material batches.
+/// A material batch combines a single material, and draw sets.
 /// 
 /// What is a material? A material instructs on how a single draw call will be done.
 /// A material will hold an OpenGL program to draw.
 /// A material has something called a global uniform requirement.
 /// A global uniform requirement can be a uniform for a perspective matrix, or a camera matrix, a color, a texture, etc...
 /// A global uniform requirement is "global", because it shouldn't be changed during a draw call, only before or after a set of draw calls are executed.
+/// 
+/// A draw set combines a mesh, uniform set, and a draw call.
+/// The mesh is a vao with a vbo bound.
+/// A uniform set is uniforms that are set inside of a uniform.
+/// A draw call is simply an OpenGL draw call.
 /// 
 /// </summary>
 class RenderingServer : public Server
