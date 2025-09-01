@@ -8,6 +8,7 @@
 /// </summary>
 class RenderingServerUpdatableObject : public UpdatableObject
 {
+protected:
 	void update() override;
 	void draw() override;
 };

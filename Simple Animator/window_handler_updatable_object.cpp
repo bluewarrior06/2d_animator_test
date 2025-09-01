@@ -1,11 +1,6 @@
 #include "window_handler_updatable_object.h"
 #include "runtime.h"
 
-WindowHandlerUpdatableObject::WindowHandlerUpdatableObject()
-{
-	rename("window_handler");
-}
-
 void WindowHandlerUpdatableObject::update()
 {
 	Runtime* runtime = get_runtime();

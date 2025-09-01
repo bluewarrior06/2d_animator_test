@@ -5,15 +5,22 @@
 UpdatableObject::UpdatableObject()
 {
 	_name = "updatable_object";
-	initialize();
 }
 UpdatableObject::~UpdatableObject()
 {
-	_exit_scene_and_propagate();
-	destroy();
+	_attempt_to_exit_scene();
 	for (UpdatableObject* child : _children)
 	{
 		delete child;
+	}
+}
+
+void UpdatableObject::_attempt_to_exit_scene()
+{
+	if (_is_in_scene)
+	{
+		exit_scene();
+		_is_in_scene = false;
 	}
 }
 
@@ -45,13 +52,10 @@ void UpdatableObject::_enter_scene_and_propagate()
 		child->_enter_scene_and_propagate();
 	}
 }
+
 void UpdatableObject::_exit_scene_and_propagate()
 {
-	if (_is_in_scene)
-	{
-		exit_scene();
-		_is_in_scene = false;
-	}
+	_attempt_to_exit_scene();
 	for (UpdatableObject* child : _children)
 	{
 		child->_exit_scene_and_propagate();
@@ -73,15 +77,6 @@ void UpdatableObject::_sync_and_propagate(Runtime* runtime)
 }
 
 
-
-void UpdatableObject::initialize()
-{
-
-}
-void UpdatableObject::destroy()
-{
-
-}
 void UpdatableObject::update()
 {
 }

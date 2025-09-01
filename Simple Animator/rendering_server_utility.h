@@ -35,6 +35,9 @@ struct RenderingServerUtility
 
 	static void update_viewport(int x, int y, int width, int height);
 
+	static void set_clear_color(GLfloat r, GLfloat g, GLfloat b, GLfloat a);
+	static void clear(GLenum mask);
+
 	static GLuint create_shader(GLenum shader_type);
 	static void destroy_shader(GLuint shader);
 	static void set_shader_source(GLuint shader, std::string source);

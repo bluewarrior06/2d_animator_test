@@ -25,8 +25,6 @@ int main()
 
 	Runtime runtime = Runtime(builder);
 
-	runtime.get_updatable_scene().get_root().add_child(new DebugUpdatableObject());
-
 	runtime.begin();
 
 	return 0;

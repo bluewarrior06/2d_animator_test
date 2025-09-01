@@ -5,10 +5,7 @@
 
 class WindowHandlerUpdatableObject : public UpdatableObject
 {
-public:
-	WindowHandlerUpdatableObject();
-	~WindowHandlerUpdatableObject();
-
+protected:
 	void update() override;
 };
 

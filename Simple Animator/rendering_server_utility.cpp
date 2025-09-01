@@ -19,6 +19,15 @@ void RenderingServerUtility::update_viewport(int x, int y, int width, int height
 	glViewport(x, y, width, height);
 }
 
+void RenderingServerUtility::set_clear_color(GLfloat r, GLfloat g, GLfloat b, GLfloat a)
+{
+	glClearColor(r, g, b, a);
+}
+void RenderingServerUtility::clear(GLenum mask)
+{
+	glClear(mask);
+}
+
 GLuint RenderingServerUtility::create_shader(GLenum shader_type)
 {
 	return glCreateShader(shader_type);

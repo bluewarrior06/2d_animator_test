@@ -9,6 +9,9 @@
 
 /// <summary>
 /// Base class for storing information to supply an OpenGL uniform with.
+/// 
+/// This on it's own isn't enough to supply information on a uniform value.
+/// When a ProgramUniformInfo has a matching name, type, and size, a Uniform can then get the location of the ProgramUniformInfo and set the value.
 /// </summary>
 /// <typeparam name="T"></typeparam>
 template <class T>
@@ -33,7 +36,6 @@ public:
 
 	bool matches_program_uniform(const ProgramUniformInfo& uniform_info)
 	{
-		printf("%d, %d", this->size, uniform_info.size);
 		bool a = this->size == uniform_info.size;
 		bool b = this->type == uniform_info.type;
 		bool c = this->name == uniform_info.name;

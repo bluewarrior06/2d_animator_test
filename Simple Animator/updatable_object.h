@@ -36,6 +36,8 @@ private:
 	/// </summary>
 	bool _is_in_scene = false;
 
+	void _attempt_to_exit_scene();
+
 	void _update_and_propagate();
 	void _draw_and_propagate();
 	void _enter_scene_and_propagate();
@@ -51,8 +53,6 @@ private:
 	void _sync_and_propagate(Runtime* runtime);
 
 protected:
-	virtual void initialize();
-	virtual void destroy();
 	virtual void update();
 	virtual void draw();
 	virtual void enter_scene();

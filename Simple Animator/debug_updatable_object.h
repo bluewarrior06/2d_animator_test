@@ -6,9 +6,6 @@
 class DebugUpdatableObject : public UpdatableObject
 {
 public:
-	void initialize() override;
-	void destroy() override;
-
 	void enter_scene() override;
 };
 
